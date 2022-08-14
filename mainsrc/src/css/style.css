@@ -1,0 +1,47 @@
+:root {
+    --gb: #858e30;
+  }
+
+  .btnclr {
+    background-color:  var(--gb);
+    color: #FFF;
+  }
+
+  #navbarsExample07 > ul > li {
+    margin-right: 1rem;
+  }
+
+  /* #headline {
+    display: block;
+  }
+
+  #headline-sm {
+    display: none;
+  } */
+
+
+  .display-5 {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 1200px) {
+
+    #btn-signUp {
+      margin-top: 1rem;
+    }
+
+  }
+  @media (max-width: 990px) {
+
+    #btn-signUp {
+      margin-top: 0;
+    }
+
+  }
+  @media (max-width: 480px) {
+
+    #headline {
+      display: none;
+    }
+
+  }
