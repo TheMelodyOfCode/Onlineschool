@@ -44,7 +44,7 @@ class TeacherController extends AbstractController {
     $jerry = $this->teacherDatabase->getSingleTeacher(3);
     $summer = $this->teacherDatabase->getSingleTeacher(4);
     
-        $this->pageload("Users", "teachers", [ 
+        $this->pageload("Teachers", "teachers", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "rick" => $rick,
             "morty" => $morty,
