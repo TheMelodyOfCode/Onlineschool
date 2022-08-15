@@ -13,10 +13,14 @@ class IndexController extends AbstractController{
 
     public function home(){
 
-        $homeArticle = $this->indexDatabase->getSingleArticle(1);
+        $aboutHeather = $this->indexDatabase->getSingleArticle(1);
+        $onlineschool = $this->indexDatabase->getSingleArticle(2);
+        $courses = $this->indexDatabase->getSingleArticle(3);
 
        $this->pageload("Home", "home", [
-        "homeArticle" => $homeArticle
+        "aboutHeather" => $aboutHeather,
+        "onlineschool" => $onlineschool,
+        "courses" => $courses
        ]);
     }
 

@@ -10,7 +10,7 @@
 
         <ul class="d-grid gap-4 my-5 list-unstyled">
           <li class="d-flex gap-4">
-            <svg class="bi text-muted flex-shrink-0" width="48" height="48"><use xlink:href="#grid-fill"/></svg>
+            <svg class="bi text-muted flex-shrink-0" width="48" height="48"><use xlink:href="#stars"/></svg>
             <div>
               <h5 class="mb-0 text-primary">About Me:</h5>
               <?php echo "<br>" . $singleUser["bio"]; ?>

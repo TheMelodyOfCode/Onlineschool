@@ -11,7 +11,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/onlineschool/mainsrc/src/img/education2.jpg" alt="education picture" />
+      <img class="img-fluid" src="/onlineschool/mainsrc/src/img/education2.jpg" alt="education picture" />
       <div class="container">
         <div class="carousel-caption text-start">
           <h1>Example headline.</h1>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/onlineschool/mainsrc/src/img/scotland2.jpg" alt="scotland picture" />
+      <img class="img-fluid" src="/onlineschool/mainsrc/src/img/scotland2.jpg" alt="scotland picture" />
       <div class="container">
         <div class="carousel-caption text-end">
           <!-- <h1>Another example headline.</h1>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/onlineschool/mainsrc/src/img/scotland3.jpg" alt="scotland3" />
+      <img class="img-fluid" src="/onlineschool/mainsrc/src/img/scotland3.jpg" alt="scotland3" />
       <div class="container">
         <div class="carousel-caption text-end">
           <!-- <h1>One more for good measure.</h1>
@@ -57,47 +57,17 @@
 <!-- Responsive left HERO
 ================================================== -->
 
-  <div id="heather" class="row flex-lg-row-reverse align-items-center  py-5">
-    <a name="tutor"></a>
-    <div class="col-10 col-sm-8 col-lg-6">
-      <h1  class="display-5 fw-bold lh-1 mb-3"> Hello and Welcome! </h1>
-      <h1  class="display-6 fw-bold lh-1 mb-3"> I'm Heather </h1>
-      <img src="/onlineschool/mainsrc/src/img/woman.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h3  class="display-5 fw-bold lh-1 mb-3"> I love Toast</h3>
-      <p class="lead">Here I'm teling you all about me and my passion to teach . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-      <p class="col-md-8 fs-4">Here yaddad yadda I'm teling you all about the online school how it works and bla bla bla.   </p>
-    </div>
-  </div>
+  <!-- Text - ABOUT HEATHER -->
+  <?php  echo $aboutHeather->textcontent; ?>
 
-  <a name="onlineSchool"></a>
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold lh-1 mb-3">Online School</h1>
-      <p class="lead">Here I'm teling you all about the online school how it works and bla bla bla.  Check out the examples below for how you can remix and restyle it to your liking. </p>
-      <p class="col-md-8 fs-4">Here yaddad yadda I'm teling you all about the online school how it works and bla bla bla.   </p>
-    </div>
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/onlineschool/mainsrc/src/img/onlineSchool.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-    </div>
-  </div>
+  <!-- Text - ONLINESCHOOL -->
+  <?php  echo $onlineschool->textcontent; ?>
 
-  <a name="courses"></a>
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/onlineschool/mainsrc/src/img/courses.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold lh-1 mb-3">Courses</h1>
-      <p class="lead">Here I'm teling you all about Courses . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-      <p class="col-md-8 fs-4">Here yaddad yadda I'm teling you all about the online school how it works and bla bla bla.   </p>
-    </div>
-  </div>
+  <!-- Text - COURSES -->
+  <?php  echo $courses->textcontent; ?>
 
 
 </div><!-- Hero end -->
-
 
 
 <!-- Marketing messaging and featurettes
