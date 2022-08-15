@@ -3,7 +3,6 @@
 <?php foreach($allAlbum As $item) : ?>
 
 
-
     <div style="width: 200px; height: 330px" class="card ">
         <img  src="onlineschool/mainsrc/Uploadfiles/<?php  echo $item->albumcover ?>" class="card-img-top" alt="...">
         <div class="card-body">

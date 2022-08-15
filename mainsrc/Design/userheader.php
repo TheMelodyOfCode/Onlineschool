@@ -83,8 +83,7 @@
                   <li><a href="/onlineschool/" class=" nav-link px-2 text-white"><i class="fa-solid fa-graduation-cap"></i>Home</a></li>
                   <li><a href="/onlineschool/#onlineSchool" class=" nav-link px-2 text-white"><i class="fa-solid fa-school"></i> Online School</a></li>
                   <li><a href="/onlineschool/#courses" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Courses</a></li>
-                  <li><a href="/Users/" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Members</a></li>
-                  <li><a href="/Users/members" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Assistant Teachers</a></li>
+                  <li><a href="/Teachers/teachers" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Assistant Teachers</a></li>
                   <li><a href="/onlineschool/#prices" class="nav-link px-2 text-white"><i class="fa-solid fa-sack-dollar"></i> Prices</a></li>
                     </ul>
                   </li>

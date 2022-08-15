@@ -53,8 +53,10 @@ require_once "init.php";
     elseif ($request == "/Users/userlink") {
         $router->add("userController", "userprofile");
     } 
-    elseif ($request == "/Users/members") {
-        $router->add("userController", "memberprofile");
+    #-----------------------------------------------------
+    #Teachers
+    elseif ($request == "/Teachers/teachers") {
+        $router->add("teacherController", "teacherProfile");
     } 
     #-----------------------------------------------------
     #Articles
@@ -80,7 +82,7 @@ require_once "init.php";
     #-----------------------------------------------------
 
     # Photoalbum AJAX
-    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX
+    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
      * AJAX greift auf die Route zu und führtdann den Code aus. */
     elseif ($request == "/Album-newAlbum"){
         # erst die Funktion

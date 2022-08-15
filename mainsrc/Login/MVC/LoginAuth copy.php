@@ -4,16 +4,14 @@ namespace App\Login\MVC;
 
 use App\SecurityLogin\SecurityLoginDatabase;
 use App\Users\UserDatabase;
-use App\Teachers\TeacherDatabase;
 
 class LoginAuth {
 
     /** Hierdurch haben wir Zugriff auf die  SecurityLogindatabase & Userdatabase die uns Methoden bereitstellt
      * um Einträge in der Datenbank zu bearbeiten, löschen, speichern oder abzurufen.*/
-    public function __construct(UserDatabase $userDatabase,TeacherDatabase $teacherDatabase, SecurityLoginDatabase $securityLoginDatabase )
+    public function __construct(UserDatabase $userDatabase, SecurityLoginDatabase $securityLoginDatabase )
     {
         $this->userDatabase = $userDatabase;
-        $this->teacherDatabase = $teacherDatabase;
         $this->securityLoginDatabase = $securityLoginDatabase;
     }
 
@@ -36,10 +34,9 @@ class LoginAuth {
     public function buildstayin($mail) {
         $identifier = $this->setIdentifier();
         $securitytoken = $this->setSecurityToken();
-        $teacher = $this->teacherDatabase->getTeacher("", $mail);
         $user = $this->userDatabase->getUser("", $mail);
         /**Hier wird die userid mit dem Identifier und token an die Funktion newstayin übergeben und in die Datenabank gespeichert*/
-        $this->securityLoginDatabase->newStayin($teacher->userid, $user->userid, $identifier, password_hash($securitytoken, PASSWORD_DEFAULT));
+        $this->securityLoginDatabase->newStayin($user->userid, $identifier, password_hash($securitytoken, PASSWORD_DEFAULT));
         setcookie("identifier", $identifier, time() + (3600*24*365)); # 1 jahr gültig
         setcookie("securitytoken", $securitytoken, time() + (3600*24*365)); # 1 jahr gültig
     }
@@ -77,13 +74,11 @@ class LoginAuth {
     public function checklogin($mail, $password){
         #userid bleibt als leerer string und nur mail wird übergeben
        $user = $this->userDatabase->getUser("", $mail);
-       $teacher = $this->teacherDatabase->getTeacher("", $mail);
-       if ($user || $teacher){ // check of mail for user
-           if (password_verify($password, $user->password, $teacher->password)){
+       if ($user){ // check of mail for user
+           if (password_verify($password, $user->password)){
             /**An dieser Stelle, durch return true ist klar dasder User sich eingelogged hat
              * und sich verifiziert, darum macht es sinn die Session hier zu setzen */
                 $user = $this->userDatabase->getUser("", $mail );
-                $teacher = $this->teacherDatabase->getTeacher("", $mail);
                 /** Durch session_regenerate_id(true) wird die Session ID bei jedem neu laden der Seite neu generiert
                  * Das verhindert Sessionfixierung */
                 session_regenerate_id(true); 

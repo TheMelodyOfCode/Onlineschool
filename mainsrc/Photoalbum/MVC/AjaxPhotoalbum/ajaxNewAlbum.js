@@ -11,7 +11,9 @@ $('#newAlbumForm').on('submit', function (event){
         type: 'POST',
         /** Die URL wird von der Route im index übergeben  */
         url: 'Album-newAlbum',
+        /** Formulardaten holen in einem lesbaren string */
         data: $(this).serialize(),
+        
         /** veraltet -- success hat man früher verwendet 
         success: function(data) {}*/
     })
