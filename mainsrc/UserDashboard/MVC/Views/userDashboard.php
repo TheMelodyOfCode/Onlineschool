@@ -21,9 +21,9 @@
         <div class="card">
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/photo-64.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Deine Fotoalben</h5>
+                    <h5 class="card-title">Deine Dokumente</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="/Photoalbum" class="btn btn-success">Zu den Alben</a>
+                    <a href="/LearningArea" class="btn btn-success">Zu den Alben</a>
                 </div>
             </div>
         </div>

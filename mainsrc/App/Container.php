@@ -22,6 +22,8 @@ use App\SecurityLogin\SecurityLoginDatabase;
 use App\UserDashboard\MVC\UserDashboardController;
 use App\Photoalbum\MVC\PhotoalbumController;
 use App\Photoalbum\PhotoalbumDatabase;
+use App\LearningArea\MVC\LearningAreaController;
+use App\LearningArea\LearningAreaDatabase;
 
 
 
@@ -49,8 +51,15 @@ class Container {
      * unter $this->classInstances[$object] = $this->builds[$object]();
      * Wenn die Instanz noch nicht existiert */
         $this->builds = [
+            'learningAreaController' => function(){
+                return new LearningAreaController($this->build("learningAreaDatabase"));
+            },
+            'learningAreaDatabase' => function(){
+                return new LearningAreaDatabase($this->build("pdo"));
+            },
+
             'photoalbumController' => function(){
-                return new PhotoalbumController($this->build("photoalbumDatabase"));
+                return new PhotoalbumController($this->build("photoalbumController"));
             },
             'photoalbumDatabase' => function(){
                 return new PhotoalbumDatabase($this->build("pdo"));
