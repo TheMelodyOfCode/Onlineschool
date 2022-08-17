@@ -17,7 +17,17 @@
     <link href="/onlineschool/mainsrc/src/css/style.css" rel="stylesheet">
     <link href="/onlineschool/mainsrc/src/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-
+  /** // TODO: get rid of media queries  */
+  @media (max-width: 1200px) {
+        #headline {
+          font-size: 1rem;
+        }
+    }
+    @media (max-width: 992px) {
+        #headline {
+          font-size: 1.3rem;
+        }
+    }
     @media (max-width: 480px) {
         #headline {
           font-size: 1.3rem;

@@ -72,22 +72,39 @@ require_once "init.php";
         $router->add("userDashboardController", "userDashboard");
     }
     #-----------------------------------------------------
-    # Photoalbum Dashboard nach Login
-    elseif ($request == "/Photoalbum"){
-        $router->add("photoalbumController", "allAlbum");
-    }
-    elseif ($request == "/Album=Settings"){
-        $router->add("photoalbumController", "albumsettings");
-    }
-    #-----------------------------------------------------
-    # LearningArea Dashboard nach Login
-    elseif ($request == "/LearningArea"){
-        $router->add("learningAreaController", "allDocuments");
+    # Document Dashboard nach Login
+    elseif ($request == "/Documents"){
+        $router->add("documentController", "allDocuments");
     }
     elseif ($request == "/Document=Settings"){
-        $router->add("learningAreaController", "documentsettings");
+        $router->add("documentController", "documentsettings");
     }
 
+    #-----------------------------------------------------
+
+    # Documents AJAX
+    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
+     * AJAX greift auf die Route zu und führtdann den Code aus. */
+    elseif ($request == "/Document-newDocument"){
+        # erst die Funktion
+        $router->add("documentController", "ajaxNewDocumentFunction");
+        # dann der View
+        $router->add("documentController", "ajaxPageDocument");
+    } 
+    elseif ($request == "/Document-Update"){
+        # erst die Funktion
+        $router->add("documentController", "ajaxUpdateDocumentFunction");
+        # dann der View
+        $router->add("documentController", "ajaxDisplaySingleDocumentSettingsPage");
+    } 
+    #-----------------------------------------------------
+        # Photoalbum Dashboard nach Login
+        elseif ($request == "/Photoalbum"){
+            $router->add("photoalbumController", "allAlbum");
+        }
+        elseif ($request == "/Album=Settings"){
+            $router->add("photoalbumController", "albumsettings");
+        }
     #-----------------------------------------------------
     # Photoalbum AJAX
     /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
@@ -103,22 +120,6 @@ require_once "init.php";
         $router->add("photoalbumController", "ajaxUpdateAlbumFunktion");
         # dann der View
         $router->add("photoalbumController", "ajaxDisplaySingleAlbumSettingsPage");
-    } 
-    #-----------------------------------------------------
-    # LearningArea AJAX
-    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
-     * AJAX greift auf die Route zu und führtdann den Code aus. */
-    elseif ($request == "/Document-newDocument"){
-        # erst die Funktion
-        $router->add("learningAreaController", "ajaxNewDocumentFunction");
-        # dann der View
-        $router->add("learningAreaController", "ajaxPageDocument");
-    } 
-    elseif ($request == "/Document-Update"){
-        # erst die Funktion
-        $router->add("learningAreaController", "ajaxUpdateDocumentFunction");
-        # dann der View
-        $router->add("learningAreaController", "ajaxDisplaySingleDocumentSettingsPage");
     } 
     #-----------------------------------------------------
     #Error-Page
