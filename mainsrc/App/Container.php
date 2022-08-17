@@ -53,7 +53,7 @@ class Container {
         $this->builds = [
             'learningAreaController' => function(){
                 return new LearningAreaController($this->build("learningAreaDatabase"));
-            },
+            },    
             'learningAreaDatabase' => function(){
                 return new LearningAreaDatabase($this->build("pdo"));
             },

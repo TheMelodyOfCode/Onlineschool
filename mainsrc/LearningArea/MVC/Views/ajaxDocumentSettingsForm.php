@@ -6,9 +6,9 @@
             </label>
             <input type="text"
                    class="form-control"
-                   id=documentname-settings"
-                   name=documentname"
-                   required
+                   id="documentname-settings"
+                   name="documentname"
+          
                    value="<?php echo $singleDocument->documentname ?>"
                    placeholder="Wie soll dein Dokument heißen?">
         </div>
@@ -17,8 +17,8 @@
                    class="form-label">Die Beschreibung deines Dokuments
             </label>
             <textarea class="form-control"
-                      name=documentdescription"
-                      id=documentdescription-settings" rows="3"><?php echo $singleDocument->documentdescription ?>
+                      name="documentdescription"
+                      id="documentdescription-settings" rows="3"><?php echo $singleDocument->documentdescription ?>
             </textarea>
         </div>
 

@@ -89,7 +89,6 @@ function getAllDocuments($userid){
         if (!empty($this->pdo)){
            $statement = $this->pdo->prepare("UPDATE $table SET `documentname` = :documentname, `documentdescription` = :documentdescription  WHERE `documentid` = :documentid ");
            $statement->execute([
-            #Im Normalfall werden hier Variablen benutzt
             'documentname' => $documentname,
             'documentdescription' => $documentdescription,
             'documentid' => $documentid

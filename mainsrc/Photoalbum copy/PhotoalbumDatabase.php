@@ -89,7 +89,6 @@ function getAllAlbum($userid){
         if (!empty($this->pdo)){
            $statement = $this->pdo->prepare("UPDATE $table SET `albumname` = :albumname, `albumdescription` = :albumdescription  WHERE `albumid` = :albumid ");
            $statement->execute([
-            #Im Normalfall werden hier Variablen benutzt
             'albumname' => $albumname,
             'albumdescription' => $albumdescription,
             'albumid' => $albumid

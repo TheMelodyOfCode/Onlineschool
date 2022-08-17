@@ -1,5 +1,5 @@
 <?php 
-
+// ini_set('memory_limit', '2048M');
 /**
  * Durch die init brauch der Autoloader und Container
  * nicht überall eingebunden werden. */

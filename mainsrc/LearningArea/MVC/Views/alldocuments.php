@@ -22,7 +22,7 @@
         data-albumdescription = "Ich bin ein neues Album" 
         data-userid="<?php  //echo $_SESSION["userid"] ?>" >New Album</button> -->
     <!-- </div> -->
-    <?php  //var_dump($_POST) ?>
+    <?php  var_dump($_POST) ?>
     <div class="container ">
         
         <!-- Durch die Funktion .done in AjaxNewAlbum wird dieser Bereich neu geladen 

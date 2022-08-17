@@ -86,7 +86,7 @@ class LearningAreaController extends AbstractController {
             ]);
     }
 
-    public function ajaxUpdateDocumentFunktion(){
+    public function ajaxUpdateDocumentFunction(){
 
         $documentname = $_POST["documentname"];
         $documentdescription = $_POST["documentdescription"];
@@ -101,7 +101,7 @@ class LearningAreaController extends AbstractController {
         $userid = $_SESSION['userid'];
         $documentid = $_POST['documentid'];
 
-        $singleDocument = $this->learningareaDatabase->getSingleDocment( $documentid);
+        $singleDocument = $this->learningareaDatabase->getSingleDocument( $documentid);
         $this->pageload("LearningArea", "ajaxDocumentSettingsForm", [
             "singleDocument" => $singleDocument,
         ]);

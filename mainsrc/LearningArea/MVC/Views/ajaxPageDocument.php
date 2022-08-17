@@ -4,7 +4,7 @@
 
 
     <div style="width: 200px; height: 330px" class="card ">
-    <a href="onlineschool/mainsrc/UploadDocs/<?php  echo $item->document ?>">document</a>
+    <a href="onlineschool/mainsrc/UploadDocs/<?php  echo $item->document ?>"><?php  echo $item->documentname ?> <?php  echo $item->document ?></a>
         <img  src="onlineschool/mainsrc/UploadDocs/<?php  echo $item->document ?>" class="card-img-top" alt="...">
         
         <div class="card-body">

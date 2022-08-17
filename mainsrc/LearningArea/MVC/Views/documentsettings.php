@@ -16,7 +16,8 @@
   <section class="  container">
             <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-
+            <?php echo var_dump($_POST) ?>
+            <?php //echo var_dump($_POST["documentname"]) ?>
             <div class="container">
                 <a href="/LearningArea"><button class="btn btn-secondary">Zurück</button></a>
             </div>
@@ -24,9 +25,11 @@
 
             <div class="container ">
                 <form method="post" id="DocumentSettingsAjax">
+
                     <div id="reloadDocumentSettingsForm">
                     <?php require_once __DIR__ . "../../../../../mainsrc/LearningArea/MVC/Views/ajaxDocumentSettingsForm.php" ?>
                     </div>
+                    
                     <input type="hidden" name="documentid" value="<?php echo $_GET['documentid'] ?>">
                     <button type="submit" class="btn btn-secondary" name="send" value="send">Speichern</button>
                 </form>
@@ -49,7 +52,7 @@
 
 
 <script src="onlineschool/mainsrc/src/Jquery/jquery-3.6.0.js"></script>
-<script src="onlineschool//mainsrc/LearningArea/MVC/AjaxLearningArea/ajaxDocumentInfoSettings.js"></script>
+<script src="onlineschool/mainsrc/LearningArea/MVC/AjaxDocument/ajaxDocumentInfoSettings.js"></script>
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 
 

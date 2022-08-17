@@ -11,7 +11,8 @@ $('#newDocumentForm').on('submit', function (event){
         type: 'POST',
         /** Die URL wird von der Route im index übergeben  */
         url: 'Document-newDocument',
-        /** Formulardaten holen in einem lesbaren string */
+        /** Formulardaten holen in einem lesbaren string 
+         * geht nur bei einer Form nicht bei einem Button */
         data: $(this).serialize(),
         
         /** veraltet -- success hat man früher verwendet 
