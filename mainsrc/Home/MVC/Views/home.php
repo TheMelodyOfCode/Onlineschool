@@ -58,12 +58,15 @@
 ================================================== -->
 
   <!-- Text - ABOUT HEATHER -->
+  <a name="tutor"></a>
   <?php  echo $aboutHeather->textcontent; ?>
 
   <!-- Text - ONLINESCHOOL -->
+  <a name="onlineSchool"></a>
   <?php  echo $onlineschool->textcontent; ?>
 
   <!-- Text - COURSES -->
+  <a name="courses"></a>
   <?php  echo $courses->textcontent; ?>
 
 

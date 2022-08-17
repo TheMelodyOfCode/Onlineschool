@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
+<?php require_once __DIR__ . "../../../../../mainsrc/Design/learningheader.php"; ?>
 
 <br>
 <br>
@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Deine Dokumente</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="/LearningArea" class="btn btn-success">Zu den Alben</a>
+                    <a href="/LearningArea" class="btn btn-success">Zu deinen Dokumenten</a>
                 </div>
             </div>
         </div>

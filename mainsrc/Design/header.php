@@ -79,8 +79,8 @@
 
         <header class="p-3 fixed-top bg-dark text-white">
 
-          <nav class="navbar navbar-expand-xl navbar-dark bg-dark" aria-label="Eighth navbar example">
-            <div class="container">
+          <nav class="py-0 navbar navbar-expand-xl navbar-dark bg-dark" aria-label="Eighth navbar example">
+            <div class=" container">
 
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
