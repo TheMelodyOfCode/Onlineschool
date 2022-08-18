@@ -13,9 +13,9 @@ $('#deleteDocument').on('click', function (event){
         url: 'Document-Delete',
         // data: $(this).serialize(), Funktioniert nur bei einer Form NICHT bei einem Button
         // data: $(this).serialize(),
-        data: {
-            documentid: $(this).data('documentid'),
-        }
+        // data: {
+        //     documentid: $(this).data('documentid'),
+        // }
     })
         /** Data ist der Platzhalter für die Daten die Er bekommt aus der Route vom Index
          * die wiederum  übergeben werden von der Funktion ajaxNewDocumentFunction und

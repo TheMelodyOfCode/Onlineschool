@@ -24,7 +24,6 @@
 
             <div class="container ">
                 <form method="post" id="DocumentSettingsAjax">
-
                     <div id="reloadDocumentSettingsForm">
                     <?php require_once __DIR__ . "../../../../../mainsrc/Documents/MVC/Views/ajaxDocumentSettingsForm.php" ?>
                     </div>
@@ -33,18 +32,17 @@
                     <button type="submit" class="btn btn-secondary" name="send" value="send">Speichern</button>
                 </form>
             </div>
-
             <br>
             <div class="container">
                 <form method="post" id="document-form" enctype="multipart/form-data">
                     <label for="document-settings" class="form-label">Document</label>
                     <input type="hidden" name="documentid" value="<?php echo $_GET['documentid'] ?>">
-                    <input class="form-control" name="document" id="document-settings" type="file" accept="application/*">
+                    <input class="form-control" name="document" id="document-settings" type="file" size="55" accept="application/pdf">
+                    <small class="text-danger"> ---- Bitte nur im PDF Format -----</small> <br>
                     <button class="btn btn-secondary" type="submit" name="save" value="send">Speichern</button>
                 </form>
                 <p><?php echo $error ?></p>
             </div>
-            <!-- <a id="deleteDocument" href="/Document-Delete?documentid=<?php echo $_GET['documentid'] ?>" class="btn btn-sm btn-outline-secondary ">Delete</a> -->
     </div>
     </div>
   </section>

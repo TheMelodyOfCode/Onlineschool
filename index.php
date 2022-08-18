@@ -101,7 +101,7 @@ require_once "init.php";
         # erst die Funktion
         $router->add("documentController", "ajaxDeleteDocumentFunction");
         // # dann der View
-        $router->add("documentController", "ajaxDeleteDocumentFunction");
+        $router->add("documentController", "ajaxPageDocument");
     }
 
     #-----------------------------------------------------

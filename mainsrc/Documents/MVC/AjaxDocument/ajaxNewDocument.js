@@ -1,11 +1,8 @@
-//alert("hey");
 
-// $(document).ready(function ($){
-//     alert("super funzt");
-// })
 
 $('#newDocumentForm').on('submit', function (event){
     event.preventDefault();
+    
     // alert("super funktioniert");
     $.ajax({
         /** Das Formular wird mit dem Typ POST abgesendet   */

@@ -50,6 +50,9 @@ class DocumentController extends AbstractController {
         ]);
     }
 
+
+
+    /** @todo add doc and txt files for upload */
     public function documentsettings(){
 
         $userid = $_SESSION['userid'];
@@ -59,7 +62,8 @@ class DocumentController extends AbstractController {
         $error = null;
         // var_dump($_FILES);
         if (!empty($_FILES)){
-            if ($_FILES["document"]["type"] == "application/pdf"){
+
+            if ($_FILES["document"]["type"] === "application/pdf"){
 
                 $upload_dir = __DIR__. "../../../../mainsrc/UploadDocs/";
                 /** den uploadfilename könnte man benutzen um den User anzuzeigen
@@ -68,8 +72,8 @@ class DocumentController extends AbstractController {
                 /** Dadurch wird der filename aus der userid und documentid zusammengesetzt und ist dadurch immer 
                  * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
                 $date = date("d.m.Y");
-                $newfilename = $date . ".pdf";
-                $newfilename = $userid . $documentid . "_" . $date . ".pdf";
+                // $newfilename = $userid . "_" . $uploadfilename ;
+                $newfilename = $userid . "_" . $date . ".pdf";
                 
                 if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
                     // $this->documentDatabase->updateDocument($newfilename, $documentid);
@@ -78,30 +82,9 @@ class DocumentController extends AbstractController {
                 } else {
                     $error = "Es ist ein Fehler aufegtreten";
                 }
-            }  
-            if ($_FILES["document"]["type"] == "application/doc" OR "application/docx"){
-
-                $upload_dir = __DIR__. "../../../../mainsrc/UploadDocs/";
-                /** den uploadfilename könnte man benutzen um den User anzuzeigen
-                 * zum Beispiel hier den hast du hochgeladen - wird jetzt hier noch nicht verwendet */
-                $uploadfilename = basename($_FILES["document"]["name"]);
-                /** Dadurch wird der filename aus der userid und documentid zusammengesetzt und ist dadurch immer 
-                 * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
-                $date = date("d.m.Y");
-                $newfilename = $date . ".pdf";
-                $newfilename = $userid . $documentid . "_" . $date . ".docx";
-                
-                if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
-                    // $this->documentDatabase->updateDocument($newfilename, $documentid);
-                    $this->documentDatabase->updateDocument($newfilename, $documentid);
-                    $error = "Das Dokument wurde hochgeladen ";
-                } else {
-                    $error = "Es ist ein Fehler aufegtreten";
-                }
-            }  
-            
+            }   
             else {
-                $error = "Du kannst nur den Datentyp pdf oder docx hochladen";
+                $error = "Du kannst nur den Datentyp pdf hochladen";
             }
 
         }
@@ -115,19 +98,20 @@ class DocumentController extends AbstractController {
 
     public function ajaxUpdateDocumentFunction(){
 
+
         $documentname = $_POST["documentname"];
         $documentdescription = $_POST["documentdescription"];
         $documentid = $_POST["documentid"];
         $this->documentDatabase->updateDocumentInformation($documentname, $documentdescription, $documentid);
-
-
+        
     }
 
+    // TODO: delete document from folder as well
     public function ajaxDeleteDocumentFunction(){
 
         $documentid = $_GET["documentid"];
         $this->documentDatabase->deleteDocument($documentid);
-
+        header("Location: /Documents"); 
     }
 
     public function ajaxDisplaySingleDocumentSettingsPage(){
