@@ -71,12 +71,15 @@ class LoginAuth {
         }
     }
 
+    /** @todo check here auf pricing option to route the user accordingly
+     * procing option in register form stiil needs to be added */
+
     public function checklogin($mail, $password){
         #userid bleibt als leerer string und nur mail wird übergeben
        $user = $this->userDatabase->getUser("", $mail);
        if ($user){ // check of mail for user
            if (password_verify($password, $user->password)){
-            /**An dieser Stelle, durch return true ist klar dasder User sich eingelogged hat
+            /**An dieser Stelle, durch return true ist klar das der User sich eingelogged hat
              * und sich verifiziert, darum macht es sinn die Session hier zu setzen */
                 $user = $this->userDatabase->getUser("", $mail );
                 /** Durch session_regenerate_id(true) wird die Session ID bei jedem neu laden der Seite neu generiert

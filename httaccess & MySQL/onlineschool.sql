@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 15. Aug 2022 um 16:56
+-- Erstellungszeit: 18. Aug 2022 um 15:35
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.4
 
@@ -38,9 +38,30 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`textid`, `textname`, `textcontent`) VALUES
-(1, 'heather', '  <div id=\"heather\" class=\"row flex-lg-row-reverse align-items-center  py-5\">\n    <a name=\"tutor\"></a>\n    <div class=\"col-10 col-sm-8 col-lg-6\">\n      <h1  class=\"display-5 fw-bold lh-1 mb-3\"> Hello and Welcome! </h1>\n      <h1  class=\"display-6 fw-bold lh-1 mb-3\"> I\'m Heather </h1>\n      <img src=\"/onlineschool/mainsrc/src/img/woman.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n    <div class=\"col-lg-6\">\n      <h3  class=\"display-5 fw-bold lh-1 mb-3\"> I love Toast</h3>\n      <p class=\"lead\">Here I\'m teling you all about me and my passion to teach . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n    \n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you even more about the online school how it works and bla bla bla.   </p>\n\n    </div>\n  </div>'),
+(1, 'heather', '  <div id=\"heather\" class=\"row flex-lg-row-reverse align-items-center  py-5\">\n    <a name=\"tutor\"></a>\n    <div class=\"col-10 col-sm-8 col-lg-6\">\n      <h1  class=\"display-5 fw-bold lh-1 mb-3\"> Hello and Welcome! </h1>\n      <h1  class=\"display-6 fw-bold lh-1 mb-3\"> I\'m Heather </h1>\n      <img src=\"/onlineschool/mainsrc/src/img/woman.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n    <div class=\"col-lg-6\">\n      <h3  class=\"display-5 fw-bold lh-1 mb-3\"> “Tell me and I forget, teach me and I may remember, involve me and I learn.” — <small>Benjamin Franklin</small></h3>\n      <p class=\"lead\">Here I\'m teling you all about me and my passion to teach . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n    \n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you even more about the online school how it works and bla bla bla.   </p>\n\n    </div>\n  </div>'),
 (2, 'onlineschool', '  <div class=\"row flex-lg-row-reverse align-items-center g-5 py-5\">\n    <div class=\"col-lg-6\">\n      <h1 class=\"display-5 fw-bold lh-1 mb-3\">Online School</h1>\n      <p class=\"lead\">Here I\'m teling you all about the online school how it works and bla bla bla.  Check out the examples below for how you can remix and restyle it to your liking. </p>\n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you all about the online school how it works and bla bla bla.   </p>\n    </div>\n    <div class=\"col-10 col-sm-8 col-lg-6\">\n      <img src=\"/onlineschool/mainsrc/src/img/onlineSchool.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n  </div>'),
 (3, 'courses', '  <div class=\"row flex-lg-row-reverse align-items-center g-5 py-5\">\n    <div class=\"col-10 col-sm-8 col-lg-6\">\n      <img src=\"/onlineschool/mainsrc/src/img/courses.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n    <div class=\"col-lg-6\">\n      <h1 class=\"display-5 fw-bold lh-1 mb-3\">Courses</h1>\n      <p class=\"lead\">Here I\'m teling you all about Courses . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you all about the online school how it works and bla bla bla.   </p>\n    </div>\n  </div>');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `documents`
+--
+
+CREATE TABLE `documents` (
+  `documentid` int(12) NOT NULL,
+  `userid` int(12) NOT NULL,
+  `documentname` varchar(255) NOT NULL,
+  `documentdescription` varchar(255) NOT NULL,
+  `document` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `documents`
+--
+
+INSERT INTO `documents` (`documentid`, `userid`, `documentname`, `documentdescription`, `document`) VALUES
+(115, 59, 'erwerter', 'rert                   ', '59_18.08.2022.pdf');
 
 -- --------------------------------------------------------
 
@@ -61,7 +82,8 @@ CREATE TABLE `photoalbum` (
 --
 
 INSERT INTO `photoalbum` (`albumid`, `userid`, `albumname`, `albumdescription`, `albumcover`) VALUES
-(93, 57, 'Spock', 'Spock Image', '5793.png');
+(93, 57, 'Spock', 'Spock Image', '5793.png'),
+(94, 60, 'mein album', 'ich bindas albm        ', '6094.png');
 
 -- --------------------------------------------------------
 
@@ -151,6 +173,12 @@ ALTER TABLE `articles`
   ADD PRIMARY KEY (`textid`);
 
 --
+-- Indizes für die Tabelle `documents`
+--
+ALTER TABLE `documents`
+  ADD PRIMARY KEY (`documentid`);
+
+--
 -- Indizes für die Tabelle `photoalbum`
 --
 ALTER TABLE `photoalbum`
@@ -185,10 +213,16 @@ ALTER TABLE `articles`
   MODIFY `textid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT für Tabelle `documents`
+--
+ALTER TABLE `documents`
+  MODIFY `documentid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+
+--
 -- AUTO_INCREMENT für Tabelle `photoalbum`
 --
 ALTER TABLE `photoalbum`
-  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT für Tabelle `securitytokens`

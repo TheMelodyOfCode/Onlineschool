@@ -9,6 +9,7 @@
     <?php  // var_dump($_POST) ?>
     <!-- Get ist standard und wird ausgeführt wenn man nichts angibt 
     Wichtig ist das POST verwendet wird-->
+    <!-- TODO:add pricing option free ,basic , enterprise -->
     <form method="POST" >
         <div class="row">
             <div class="mb-3 col col-6">
