@@ -1,4 +1,5 @@
 
+/* UMBAU delete */
 
 $('#DocumentSettingsAjax').on('submit', function (event){
     event.preventDefault();
@@ -23,6 +24,8 @@ $('#DocumentSettingsAjax').on('submit', function (event){
         })
         .fail(function () {
             console.log("Das Ding ist fehlgeschlagen");
+            alert("Das Ding ist fehlgeschlagen");
         })
 
 })
+

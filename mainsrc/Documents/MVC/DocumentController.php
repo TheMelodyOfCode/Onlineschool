@@ -39,6 +39,7 @@ class DocumentController extends AbstractController {
         $this->documentDatabase->newDocument($documentname, $documentdescription, $userid);
     }
 
+
     public function ajaxPageDocument(){
 
         $allDocuments = $this->documentDatabase->getAllDocuments($_SESSION["userid"]);
@@ -54,10 +55,11 @@ class DocumentController extends AbstractController {
         $userid = $_SESSION['userid'];
         $documentid = $_GET['documentid'];
         $singleDocument = $this->documentDatabase->getSingleDocument( $documentid);
+        
         $error = null;
         // var_dump($_FILES);
         if (!empty($_FILES)){
-            if ($_FILES["document"]["type"] == "application/pdf" OR "application/doc" OR "application/docx"){
+            if ($_FILES["document"]["type"] == "application/pdf"){
 
                 $upload_dir = __DIR__. "../../../../mainsrc/UploadDocs/";
                 /** den uploadfilename könnte man benutzen um den User anzuzeigen
@@ -65,15 +67,40 @@ class DocumentController extends AbstractController {
                 $uploadfilename = basename($_FILES["document"]["name"]);
                 /** Dadurch wird der filename aus der userid und documentid zusammengesetzt und ist dadurch immer 
                  * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
-                $newfilename = $userid . $documentid . ".pdf";
-    
+                $date = date("d.m.Y");
+                $newfilename = $date . ".pdf";
+                $newfilename = $userid . $documentid . "_" . $date . ".pdf";
+                
                 if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
+                    // $this->documentDatabase->updateDocument($newfilename, $documentid);
                     $this->documentDatabase->updateDocument($newfilename, $documentid);
                     $error = "Das Dokument wurde hochgeladen ";
                 } else {
                     $error = "Es ist ein Fehler aufegtreten";
                 }
-            }  else {
+            }  
+            if ($_FILES["document"]["type"] == "application/doc" OR "application/docx"){
+
+                $upload_dir = __DIR__. "../../../../mainsrc/UploadDocs/";
+                /** den uploadfilename könnte man benutzen um den User anzuzeigen
+                 * zum Beispiel hier den hast du hochgeladen - wird jetzt hier noch nicht verwendet */
+                $uploadfilename = basename($_FILES["document"]["name"]);
+                /** Dadurch wird der filename aus der userid und documentid zusammengesetzt und ist dadurch immer 
+                 * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
+                $date = date("d.m.Y");
+                $newfilename = $date . ".pdf";
+                $newfilename = $userid . $documentid . "_" . $date . ".docx";
+                
+                if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
+                    // $this->documentDatabase->updateDocument($newfilename, $documentid);
+                    $this->documentDatabase->updateDocument($newfilename, $documentid);
+                    $error = "Das Dokument wurde hochgeladen ";
+                } else {
+                    $error = "Es ist ein Fehler aufegtreten";
+                }
+            }  
+            
+            else {
                 $error = "Du kannst nur den Datentyp pdf oder docx hochladen";
             }
 
@@ -96,12 +123,20 @@ class DocumentController extends AbstractController {
 
     }
 
+    public function ajaxDeleteDocumentFunction(){
+
+        $documentid = $_GET["documentid"];
+        $this->documentDatabase->deleteDocument($documentid);
+
+    }
+
     public function ajaxDisplaySingleDocumentSettingsPage(){
         
         $userid = $_SESSION['userid'];
         $documentid = $_POST['documentid'];
 
         $singleDocument = $this->documentDatabase->getSingleDocument( $documentid);
+
         $this->pageload("Documents", "ajaxDocumentSettingsForm", [
             "singleDocument" => $singleDocument,
         ]);

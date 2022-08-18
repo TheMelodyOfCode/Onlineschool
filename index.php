@@ -84,11 +84,11 @@ require_once "init.php";
 
     # Documents AJAX
     /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
-     * AJAX greift auf die Route zu und führtdann den Code aus. */
+     * AJAX greift auf die Route zu und führt dann den Code aus. */
     elseif ($request == "/Document-newDocument"){
-        # erst die Funktion
+        # erst wird die Funktion ausgeführt
         $router->add("documentController", "ajaxNewDocumentFunction");
-        # dann der View
+        # danach die Funktion für den render - der View
         $router->add("documentController", "ajaxPageDocument");
     } 
     elseif ($request == "/Document-Update"){
@@ -96,7 +96,14 @@ require_once "init.php";
         $router->add("documentController", "ajaxUpdateDocumentFunction");
         # dann der View
         $router->add("documentController", "ajaxDisplaySingleDocumentSettingsPage");
-    } 
+    }
+    elseif ($request == "/Document-Delete"){
+        # erst die Funktion
+        $router->add("documentController", "ajaxDeleteDocumentFunction");
+        // # dann der View
+        $router->add("documentController", "ajaxDeleteDocumentFunction");
+    }
+
     #-----------------------------------------------------
         # Photoalbum Dashboard nach Login
         elseif ($request == "/Photoalbum"){

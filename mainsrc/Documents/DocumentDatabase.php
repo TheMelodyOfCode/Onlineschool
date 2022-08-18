@@ -66,18 +66,19 @@ function getAllDocuments($userid){
                 'documentdescription' => $documentdescription,
                 'userid' => $userid,
             ]);
+
         }
     }
     
     
-    function deletDocument($documentname){ 
+    function deleteDocument($documentid){ 
     
 
         $table = $this->getTable();
         if (!empty($this->pdo)){
-           $statement = $this->pdo->prepare("DELETE FROM $table WHERE documentname = :documentname");
+           $statement = $this->pdo->prepare("DELETE FROM $table WHERE documentid = :documentid");
            $statement->execute([
-            'documentname' => $documentname
+            'documentid' => $documentid
            ]);
         }
     }
