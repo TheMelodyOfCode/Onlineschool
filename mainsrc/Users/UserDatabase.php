@@ -81,14 +81,21 @@ function deletUser($username){
 }
 
 
-function updateUser(){ 
+function updateUser($firstname,$lastname,$username,$mail,$password, $bio, $userid){ 
     $table = $this->getTable();
     if (!empty($this->pdo)){
-       $statement = $this->pdo->prepare("UPDATE $table SET password = :password WHERE `userid` = :userid ");
+
+       $statement = $this->pdo->prepare("UPDATE $table SET firstname = :firstname, lastname = :lastname, username = :username, mail = :mail, password = :password, bio = :bio WHERE `userid` = :userid ");
        $statement->execute([
         #Im Normalfall werden hier Variablen benutzt
-        'password' => "12345Updated",
-        'userid' => 5
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'username' => $username,
+            'mail' => $mail,
+            'password' => $password,
+            'bio' => $bio,
+            'userid' => $userid
+            
        ]);
        #Hier wird kein return benötigt, weil nichts ausgegeben werden muss
     }
