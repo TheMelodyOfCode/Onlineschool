@@ -60,9 +60,9 @@
         <div class="card">
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/user-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Your Profil</h5>
-                    <p class="card-text">Here you can make changes to your Name, Email and Passord</p>
-                    <a href="#" class="btn btn-success">Go to your Profil</a>
+                    <h5 class="card-title">Your Profile</h5>
+                    <p class="card-text">Here you can make changes to your Name, Email and Password</p>
+                    <a href="/Users/userprofile?userid=<?php echo $_SESSION["userid"] ?>" class="btn btn-success">Go to your Profil</a>
                 </div>
             </div>
 

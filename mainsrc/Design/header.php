@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add SEO tags -->
     <title>Heathers' English Club</title>
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/onlineschool/mainsrc/src/img/fav/favicon.ico">

@@ -21,22 +21,44 @@ class RegisterController extends AbstractController{
     #lädt register.php und verarbeitet die eingegeben Formulardaten
     public function register(){
         //var_dump($_POST);
+        
+    /*  not needed since there is a required field
         $fail = null;
-        $emailFail = null;
+        $emailFail = null; */
         $regSuccess = null;
+
+        $pwdFail = null;
+
         if (!empty($_POST)){
             $firstname = $_POST["firstname"];
             $lastname = $_POST["lastname"];
             $username = $_POST["username"];
             $email = $_POST["email"];
             $password = $_POST["password"];
+            $password_confirm = $_POST["password_confirm"];
             $bio = $_POST["bio"];
             $submit = $_POST["submit"];
+
+            // Validate password strength
+            $uppercase = preg_match('@[A-Z]@', $password);
+            $lowercase = preg_match('@[a-z]@', $password);
+            $number    = preg_match('@[0-9]@', $password);
+            $specialChars = preg_match('@[^\w]@', $password);
+
+            if ($_POST["password"] !== $_POST["password_confirm"]){
+                $password = "";
+                $pwdFail = " Die Passwörter stimmen nicht überein !";
+                // $pwdFail = die(" Die Passwörter stimmen nicht überein !");
+            } 
+            
+            if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8 || $_POST["password"] !== $_POST["password_confirm"] ) {
+                $password = "";
+                $pwdFail = 'Password should match and be at least 8 characters in length and should include at least one upper case letter, one number, and one special character. SORRY DUDE!';
+            }
             
             // var_dump($_POST["email"]);
-            if (empty($firstname AND $lastname AND $username AND $email AND $password)){
-                $fail = "Na na na ! - Bitte fülle alle Felder aus !";
-            } else {
+
+            else {
                 $user = $this->userDatabase->getUserByEmail($email);
                 if (empty($user)){
 
@@ -71,6 +93,7 @@ class RegisterController extends AbstractController{
                     // }
 
                     $regSuccess = " Du hast Dich erfolgreich registriert";
+                    
                 } else {
                     $emailFail = "Ein Account mit dieser Email existiert schon!";
                 }
@@ -86,9 +109,10 @@ class RegisterController extends AbstractController{
         // var_dump(password_verify("Tomate", '$2y$10$AlEZJYjo6twcsnrd3hfWZuvpMHuVKEiGiX4zUgXwCPnTdCSYU5lkS'));
 
         $this->pageload("Register", "register", [
-            'fail' => $fail,
-            'emailFail' => $emailFail,
+            // 'fail' => $fail,
+            // 'emailFail' => $emailFail,
             'regSuccess' => $regSuccess,
+            'pwdFail' => $pwdFail,
         ]);
     }
 }

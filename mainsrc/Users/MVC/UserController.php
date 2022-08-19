@@ -26,14 +26,29 @@ class UserController extends AbstractController {
     public function userprofile() {
     $userid = $_GET["userid"];
     $singleUser = $this->userDatabase->getSingleUser($userid);
-    $age = 22;
+    // $age = 22;
 
         /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
          *  directory, page und das Array mit den variablen */
         $this->pageload("Users", "user", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "singleUser" => $singleUser,
-            "age" => $age
+            // "age" => $age
+            ]);
+    }
+
+
+    public function changeProfile() {
+    $userid = $_GET["userid"];
+    $singleUser = $this->userDatabase->getSingleUser($userid);
+    // $age = 22;
+
+        /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
+         *  directory, page und das Array mit den variablen */
+        $this->pageload("Users", "userprofile", [ 
+            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+            "singleUser" => $singleUser,
+            // "age" => $age
             ]);
     }
 
