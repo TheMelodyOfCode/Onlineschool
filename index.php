@@ -54,9 +54,11 @@ require_once "init.php";
         $router->add("userController", "userprofile");
     } 
     elseif ($request == "/Users/userprofile") {
-        $router->add("userController", "updateProfile");
+        $router->add("userController", "ajaxUpdateProfile");
     } 
     #-----------------------------------------------------
+
+    
     #Teachers
     elseif ($request == "/Teachers/teachers") {
         $router->add("teacherController", "teacherProfile");
