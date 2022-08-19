@@ -99,6 +99,18 @@ class UserController extends AbstractController {
             ]);
     }
 
+    public function ajaxPageUser(){
+
+        
+        // $userid = $_GET["userid"];
+        $singleUser = $this->userDatabase->getSingleUser($_SESSION["userid"]);
+        /** Es soll nur der Bereich der Album Seite geladen werden 
+         * und nicht die ganze Seite! */
+        $this->pageload("Users", "userprofile", [
+            "singleUser" => $singleUser,
+        ]);
+    }
+
 
     public function teacherProfile() {    
 

@@ -11,9 +11,10 @@
     </div>
   </section>
 
-  <p  style="color: RED"><?php echo $UpdateSuccess ?></p>
+
   <div id="registerform" class="container col col-6">
-  <?php echo var_dump($_POST) ?>
+  <?php //echo var_dump($_POST) ?>
+  <p  style="color: RED"><?php echo $UpdateSuccess ?></p>
     <form method="POST" >
         <div class="row">
             <div class="mb-3 col col-6">

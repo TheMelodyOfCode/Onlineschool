@@ -57,8 +57,17 @@ require_once "init.php";
         $router->add("userController", "ajaxUpdateProfile");
     } 
     #-----------------------------------------------------
+    # User Profile Update AJAX
+    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
+     * AJAX greift auf die Route zu und führt dann den Code aus. */
+    elseif ($request == "/Profile-Update"){
+        # erst wird die Funktion ausgeführt
+        $router->add("userController", "ajaxUpdateProfile");
+        # danach die Funktion für den render - der View
+        $router->add("userController", "userprofile");
+    } 
 
-    
+
     #Teachers
     elseif ($request == "/Teachers/teachers") {
         $router->add("teacherController", "teacherProfile");
