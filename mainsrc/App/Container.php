@@ -65,7 +65,7 @@ class Container {
                 return new PhotoalbumDatabase($this->build("pdo"));
             },
             'userDashboardController' => function(){
-                return new UserDashboardController();
+                return new UserDashboardController($this->build("userDatabase"));
             },
             'logoutController' => function(){
                 return new LogoutController($this->build("securityLoginDatabase"));

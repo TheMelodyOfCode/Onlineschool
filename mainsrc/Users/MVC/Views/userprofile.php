@@ -11,11 +11,11 @@
     </div>
   </section>
 
-
-  <div id="registerform" class="container col col-6">
+<!-- TODO: separate update password and email form the rest of the information -->
+  <div  class="container col col-6">
   <?php //echo var_dump($_POST) ?>
   <p  style="color: RED"><?php echo $UpdateSuccess ?></p>
-    <form method="POST" >
+    <form id="registerform" method="POST" >
         <div class="row">
             <div class="mb-3 col col-6">
                 <label for="firstname" class="form-label">Vorname</label>                                 

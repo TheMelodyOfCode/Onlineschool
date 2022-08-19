@@ -85,6 +85,10 @@ require_once "init.php";
     elseif ($request == "/Dashboard"){
         $router->add("userDashboardController", "userDashboard");
     }
+    // elseif ($request == "/Dashboard"){
+    //     $router->add("userDashboardController", "userInformation");
+    // }
+
     #-----------------------------------------------------
     # Document Dashboard nach Login
     elseif ($request == "/Documents"){
