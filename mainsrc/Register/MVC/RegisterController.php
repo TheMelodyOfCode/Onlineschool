@@ -36,8 +36,10 @@ class RegisterController extends AbstractController{
             $email = $_POST["email"];
             $password = $_POST["password"];
             $password_confirm = $_POST["password_confirm"];
+            $membership =  $_POST["membership"];
             $bio = $_POST["bio"];
             $submit = $_POST["submit"];
+
 
             // Validate password strength
             $uppercase = preg_match('@[A-Z]@', $password);
@@ -45,11 +47,6 @@ class RegisterController extends AbstractController{
             $number    = preg_match('@[0-9]@', $password);
             $specialChars = preg_match('@[^\w]@', $password);
 
-            if ($_POST["password"] !== $_POST["password_confirm"]){
-                $password = "";
-                $pwdFail = " Die Passwörter stimmen nicht überein !";
-                // $pwdFail = die(" Die Passwörter stimmen nicht überein !");
-            } 
             
             if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8 || $_POST["password"] !== $_POST["password_confirm"] ) {
                 $password = "";
@@ -64,7 +61,7 @@ class RegisterController extends AbstractController{
 
                     $password_hash = password_hash($password, PASSWORD_DEFAULT);
                     #speichert den user ein
-                    $this->userDatabase->newUser($firstname,$lastname,$username,$email,$password_hash, $bio);
+                    $this->userDatabase->newUser($firstname,$lastname,$username,$email,$password_hash, $membership, $bio);
                     #Grundeinstellungen zum Email versenden nach der Registrierung
                     // $this->PHPMailer->isSMTP();
                     // $this->PHPMailer->Host = "smtp.NAMEOFEmailPROVIDER.com";

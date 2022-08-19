@@ -49,18 +49,19 @@ class UserDatabase extends AbstractDatabase {
        
     }
 
-function newUser($firstname,$lastname,$username,$email,$password,$bio){ 
+function newUser($firstname,$lastname,$username,$email,$password, $membership, $bio){ 
 
     $table = $this->getTable();
     if (!empty($this->pdo)){
         #Hier ist wichtig das die Platzhalter in der richtigen Reihenfolge sind
-        $statement =  $this->pdo->prepare("INSERT INTO `$table` (`firstname`, `lastname`,`username`, `mail`, `password`, `bio`) VALUES (:firstname, :lastname,:username, :mail, :password, :bio)");
+        $statement =  $this->pdo->prepare("INSERT INTO `$table` (`firstname`, `lastname`,`username`, `mail`, `password`, `membership`, `bio`) VALUES (:firstname, :lastname,:username, :mail, :password, :membership, :bio)");
         $statement->execute([
             'firstname' => $firstname,
             'lastname' => $lastname,
             'username' => $username,
             'mail' => $email,
             'password' => $password,
+            'membership' => $membership,
             'bio' => $bio,
         ]);
     }
