@@ -12,6 +12,31 @@ class UserController extends AbstractController {
         $this->userDatabase = $userDatabase;
     }
 
+    function checkMembership(){
+        $userid = $_SESSION["userid"];
+        $singleUser = $this->userDatabase->getSingleUser($userid);
+        
+        if ($_SESSION["membership"] === "pro") {
+
+            $this->pageload("Users", "learningAreaPro", [
+                "singleUser" => $singleUser,
+                ]);
+
+        }
+        if ($_SESSION["membership"] === "enterprise") {
+
+            $this->pageload("Users", "enterpriseLearning", [
+                "singleUser" => $singleUser,
+                ]);
+            // header("Location: /Users/learningAreaPro"); 
+
+        } else {
+            $this->pageload("Users", "freeLearning", [
+                "singleUser" => $singleUser,
+                ]);
+        }
+        
+    }
 
     public function getAllUsers() {
 
@@ -26,14 +51,12 @@ class UserController extends AbstractController {
     public function userprofile() {
     $userid = $_GET["userid"];
     $singleUser = $this->userDatabase->getSingleUser($userid);
-    // $age = 22;
 
         /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
          *  directory, page und das Array mit den variablen */
         $this->pageload("Users", "user", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "singleUser" => $singleUser,
-            // "age" => $age
             ]);
     }
 
@@ -98,17 +121,7 @@ class UserController extends AbstractController {
             ]);
     }
 
-    // public function ajaxPageUser(){
 
-        
-    //     // $userid = $_GET["userid"];
-    //     $singleUser = $this->userDatabase->getSingleUser($_SESSION["userid"]);
-    //     /** Es soll nur der Bereich der Album Seite geladen werden 
-    //      * und nicht die ganze Seite! */
-    //     $this->pageload("Users", "userprofile", [
-    //         "singleUser" => $singleUser,
-    //     ]);
-    // }
 
 
     public function teacherProfile() {    

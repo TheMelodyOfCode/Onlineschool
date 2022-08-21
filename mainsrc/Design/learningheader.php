@@ -126,7 +126,7 @@
 
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bolt"></i> Speaking Section 1</a>
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bolt"></i> Pro Speaking </a>
                           <ul class="dropdown-menu" aria-labelledby="dropdown01">
                             <li><a class="dropdown-item" href="#"> Speaking Filler</a></li>
                             <li><a class="dropdown-item" href="#"> Speaking Filler</a></li>
@@ -141,7 +141,7 @@
 
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-feather-pointed"></i> Writing Section 1</a>
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-feather-pointed"></i> Pro Writing  </a>
                           <ul class="dropdown-menu" aria-labelledby="dropdown01">
                             <li><a class="dropdown-item" href="#"> Writing Filler</a></li>
                             <li><a class="dropdown-item" href="#"> Writing Filler</a></li>
@@ -154,7 +154,7 @@
                           </ul>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-feather-pointed"></i> Listening Section 1</a>
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-feather-pointed"></i> Pro Listening</a>
                           <ul class="dropdown-menu" aria-labelledby="dropdown01">
                             <li><a class="dropdown-item" href="#"> Listening Filler</a></li>
                             <li><a class="dropdown-item" href="#"> Listening Filler</a></li>
@@ -166,8 +166,6 @@
                             <li><a class="dropdown-item" href="#"> Listening Filler</a></li>
                           </ul>
                         </li>
-
-
 
 
                   </ul> 

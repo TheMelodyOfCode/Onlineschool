@@ -59,7 +59,7 @@ class PhotoalbumController extends AbstractController {
         if (!empty($_FILES)){
             if ($_FILES["albumcover"]["type"] == "image/jpeg" OR "image/png"){
 
-                $upload_dir = __DIR__. "../../../../mainsrc/Uploadfiles/";
+                $upload_dir = __DIR__. "../../../../mainsrc/UploadPhotos/";
                 /** den uploadfilename könnte man benutzen um den User anzuzeigen
                  * zum Beispiel hier den hast du hochgeladen - wird jetzt hier noch nicht verwendet */
                 $uploadfilename = basename($_FILES["albumcover"]["name"]);

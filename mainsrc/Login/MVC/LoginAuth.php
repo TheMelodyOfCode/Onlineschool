@@ -71,8 +71,7 @@ class LoginAuth {
         }
     }
 
-    /** @todo check here auf pricing option to route the user accordingly
-     * procing option in register form stiil needs to be added */
+    /** @todo check here auf pricing option to route the user accordingly */
 
     public function checklogin($mail, $password){
         #userid bleibt als leerer string und nur mail wird übergeben
@@ -87,6 +86,7 @@ class LoginAuth {
                 session_regenerate_id(true); 
                 $_SESSION["userid"] = $user->userid;
                 $_SESSION["username"] = $user->username;
+                $_SESSION["membership"] = $user->membership;
                 $_SESSION["login"] = true;
                return true; 
            } else {

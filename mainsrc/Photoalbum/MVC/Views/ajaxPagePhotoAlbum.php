@@ -4,7 +4,7 @@
 
 
     <div style="width: 200px; height: 330px" class="card ">
-        <img  src="onlineschool/mainsrc/Uploadfiles/<?php  echo $item->albumcover ?>" class="card-img-top" alt="...">
+        <img  src="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php  echo html($item->albumname) ?></h5>
             <p class="card-text"><?php  echo html($item->albumdescription); ?></p>
