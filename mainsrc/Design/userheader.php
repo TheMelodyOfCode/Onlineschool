@@ -113,12 +113,10 @@
               <div class="collapse navbar-collapse " id="navbarsExample07">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                        <li><a href="/onlineschool/" class=" nav-link px-2 text-white"><i class="fa-solid fa-graduation-cap"></i>Home</a></li>
-                        <li><a href="/onlineschool/#onlineSchool" class=" nav-link px-2 text-white"><i class="fa-solid fa-school"></i> Online School</a></li>
+                        <li><a href="/onlineschool/" class=" nav-link px-2 text-white"><i class="fa-solid fa-graduation-cap"></i> Home</a></li>
 
+                        <li><a href="/Photoalbum" class="nav-link px-2 text-white"><i class="fa-solid fa-camera-retro"></i>  Gallery</a></li>
 
-                        <li><a href="/onlineschool/#courses" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Courses</a></li>
-                        <li><a href="/onlineschool/#prices" class="nav-link px-2 text-white"><i class="fa-solid fa-sack-dollar"></i> Prices</a></li>
                         <li><a href="/Teachers/teachers" class="nav-link px-2 text-white"><i class="fa-solid fa-chalkboard-user"></i> Assistant Teachers</a></li> 
                         <li><a href="/Dashboard" class="nav-link px-2 text-white"><i class="fa-solid fa-book-open"></i> Your Area</a></li>
                   </ul>

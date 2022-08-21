@@ -59,7 +59,7 @@ class Container {
             },
 
             'photoalbumController' => function(){
-                return new PhotoalbumController($this->build("photoalbumController"));
+                return new PhotoalbumController($this->build("photoalbumDatabase"));
             },
             'photoalbumDatabase' => function(){
                 return new PhotoalbumDatabase($this->build("pdo"));
