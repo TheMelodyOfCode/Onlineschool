@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/learningheader.php"; ?>
+<?php require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
 
 <br>
 <br>
@@ -61,7 +61,7 @@
         <div class="card">
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/user-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Your Profile</h5>
+                    <h5 class="card-title">Update your Profile</h5>
                     <p class="card-text">Here you can make changes to your Name, Email and Password</p>
                     <a href="/Users/userprofile?userid=<?php echo $_SESSION["userid"] ?>" class="btn btn-success">Go to your Profil</a>
                 </div>

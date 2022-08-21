@@ -38,7 +38,7 @@ class UserController extends AbstractController {
     }
 
 
-    public function ajaxUpdateProfile() {
+    public function updateUserProfile() {
         $pwdFail = null;
         $UpdateSuccess = null;
         $emailFail = null;
@@ -79,11 +79,10 @@ class UserController extends AbstractController {
                 $this->userDatabase->updateUser($firstname,$lastname,$username,$email,$password_hash, $bio,$userid);
 
 
-                $UpdateSuccess = " Du hast alles erfolgreich aktualisiert";
                 
-            // } else {
-            //     $emailFail = "Ein Account mit dieser Email existiert schon!";
-            // }
+                
+                header("Location: /Users/userprofile?userid=$userid>"); 
+                
         }
     }
 
@@ -99,17 +98,17 @@ class UserController extends AbstractController {
             ]);
     }
 
-    public function ajaxPageUser(){
+    // public function ajaxPageUser(){
 
         
-        // $userid = $_GET["userid"];
-        $singleUser = $this->userDatabase->getSingleUser($_SESSION["userid"]);
-        /** Es soll nur der Bereich der Album Seite geladen werden 
-         * und nicht die ganze Seite! */
-        $this->pageload("Users", "userprofile", [
-            "singleUser" => $singleUser,
-        ]);
-    }
+    //     // $userid = $_GET["userid"];
+    //     $singleUser = $this->userDatabase->getSingleUser($_SESSION["userid"]);
+    //     /** Es soll nur der Bereich der Album Seite geladen werden 
+    //      * und nicht die ganze Seite! */
+    //     $this->pageload("Users", "userprofile", [
+    //         "singleUser" => $singleUser,
+    //     ]);
+    // }
 
 
     public function teacherProfile() {    

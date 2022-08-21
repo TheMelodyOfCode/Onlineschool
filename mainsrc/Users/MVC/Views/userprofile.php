@@ -58,7 +58,7 @@
 
 
 
-        <button type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
+        <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
         
     </form>
 </div>
@@ -71,11 +71,4 @@
 
 
 
-    
-        
-         
-
-        
-
-    
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
