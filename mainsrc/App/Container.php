@@ -7,8 +7,8 @@ use App\Home\MVC\IndexController;
 use App\Home\IndexDatabase;
 use App\Error\MVC\ErrorController;
 use App\Connections\ConToMySQL;
-use App\Teachers\MVC\TeacherController;
-use App\Teachers\TeacherDatabase;
+// use App\Teachers\MVC\TeacherController;
+// use App\Teachers\TeacherDatabase;
 use App\Users\MVC\UserController;
 use App\Users\Userdatabase;
 use App\Register\MVC\RegisterController;
@@ -123,12 +123,12 @@ class Container {
                 return new ArticleDatabase($this->build('pdo'));
             },
 
-            'teacherController' => function(){
-                return new TeacherController($this->build("teacherDatabase"));
-            },
-            'teacherDatabase' => function(){
-                return new TeacherDatabase($this->build('pdo'));
-            },
+            // 'teacherController' => function(){
+            //     return new TeacherController($this->build("teacherDatabase"));
+            // },
+            // 'teacherDatabase' => function(){
+            //     return new TeacherDatabase($this->build('pdo'));
+            // },
             'userController' => function(){
                 return new UserController($this->build("userDatabase"));
             },

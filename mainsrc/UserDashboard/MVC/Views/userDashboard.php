@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Your learning Area</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="/Users/learningArea" class="btn btn-success">Go to your learning Area</a>
+                        <a href="/UserDashboard/learningArea" class="btn btn-success">Go to your learning Area</a>
                     </div>
             </div>
         </div>

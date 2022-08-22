@@ -16,22 +16,22 @@ class UserController extends AbstractController {
         $userid = $_SESSION["userid"];
         $singleUser = $this->userDatabase->getSingleUser($userid);
         
-        if ($_SESSION["membership"] === "pro") {
+        if ($_SESSION["membership"] === "pro" OR $_SESSION["membership"] === "teacher") {
 
-            $this->pageload("Users", "learningAreaPro", [
+            $this->pageload("UserDashboard", "learningAreaPro", [
                 "singleUser" => $singleUser,
                 ]);
 
         }
         if ($_SESSION["membership"] === "enterprise") {
 
-            $this->pageload("Users", "enterpriseLearning", [
+            $this->pageload("UserDashboard", "enterpriseLearning", [
                 "singleUser" => $singleUser,
                 ]);
             // header("Location: /Users/learningAreaPro"); 
 
         } else {
-            $this->pageload("Users", "freeLearning", [
+            $this->pageload("UserDashboard", "freeLearning", [
                 "singleUser" => $singleUser,
                 ]);
         }

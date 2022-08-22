@@ -56,13 +56,13 @@ require_once "init.php";
     elseif ($request == "/Users/userprofile") {
         $router->add("userController", "updateUserProfile");
     } 
-    elseif ($request == "/Users/learningArea") {
+    elseif ($request == "/UserDashboard/learningArea") {
         $router->add("userController", "checkMembership");
     } 
     #-----------------------------------------------------
     #Teachers
-    elseif ($request == "/Teachers/teachers") {
-        $router->add("teacherController", "teacherProfile");
+    elseif ($request == "/Teachers") {
+        $router->add("userDashboardController", "teacherProfile");
     } 
     #-----------------------------------------------------
     #Articles

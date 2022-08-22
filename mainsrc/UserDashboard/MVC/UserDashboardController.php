@@ -33,7 +33,22 @@ class UserDashboardController extends AbstractController {
         
     }
 
+    public function teacherProfile() {    
 
+        $rick = $this->userDatabase->getSingleUser(1);
+        $morty = $this->userDatabase->getSingleUser(2);
+        $jerry = $this->userDatabase->getSingleUser(3);
+        $summer = $this->userDatabase->getSingleUser(4);
+        
+            $this->pageload("UserDashboard", "teachers", [ 
+                # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                "rick" => $rick,
+                "morty" => $morty,
+                "jerry" => $jerry,
+                "summer" => $summer,
+    
+                ]);
+        }
 
 
 
