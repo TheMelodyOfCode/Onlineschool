@@ -21,13 +21,17 @@ class PhotoalbumController extends AbstractController {
             $userid = $_POST["userid"];
             $this->PhotoalbumDatabase->newAlbum($albumname, $albumdescription, $userid);
         }
- 
+        if ($_SESSION["login"]) {
         /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
          *  directory, page und das Array mit den variablen */
         $this->pageload("Photoalbum", "allalbum", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "allAlbum" => $allAlbum,
             ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+
     }
 
     public function ajaxNewAlbumFunction(){
@@ -78,12 +82,16 @@ class PhotoalbumController extends AbstractController {
             }
 
         }
+        if ($_SESSION["login"]) {
+            $this->pageload("Photoalbum", "albumsettings", [ 
+                # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                "singleAlbum" => $singleAlbum,
+                "error" => $error,
+                ]);
+            }   else {
+                header("Location: /Login"); 
+            }
 
-        $this->pageload("Photoalbum", "albumsettings", [ 
-            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
-            "singleAlbum" => $singleAlbum,
-            "error" => $error,
-            ]);
     }
 
     public function ajaxUpdateAlbumFunktion(){

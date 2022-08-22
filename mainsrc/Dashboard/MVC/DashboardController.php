@@ -23,14 +23,15 @@ class DashboardController extends AbstractController {
          * Das Dashboard kann nur erreicht werden wenn man eingelogged ist.
          * HIER kann man dann auch weitere Seiten hinzufügen, die Nur über einen Login
          * erreichbar sein sollen. oder auch noch auf andere Sachen prüfen über die Session variable*/
+
         if ($_SESSION["login"]) {
-            $this->pageload("Dashboard", "userDashboard", [
-                "singleUser" => $singleUser,
-            ]);
-        } else {
-            header("Location: /Login"); 
-        }
-        
+                $this->pageload("Dashboard", "userDashboard", [
+                    "singleUser" => $singleUser,
+                ]);
+            }   else {
+                header("Location: /Login"); 
+            }
+           
     }
 
     function checkMembership(){
@@ -39,17 +40,26 @@ class DashboardController extends AbstractController {
         
         if ($_SESSION["membership"] === "pro" OR $_SESSION["membership"] === "teacher") {
 
-            $this->pageload("Dashboard", "learningAreaPro", [
-                "singleUser" => $singleUser,
-                ]);
+            if ($_SESSION["login"]) {
+                $this->pageload("Dashboard", "learningAreaPro", [
+                    "singleUser" => $singleUser,
+                    ]);    
+            }   else {
+                header("Location: /Login"); 
+            }
 
         }
         if ($_SESSION["membership"] === "enterprise") {
 
-            $this->pageload("Dashboard", "enterpriseLearning", [
-                "singleUser" => $singleUser,
-                ]);
-            // header("Location: /Users/learningAreaPro"); 
+            if ($_SESSION["login"]) {
+                $this->pageload("Dashboard", "enterpriseLearning", [
+                    "singleUser" => $singleUser,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+            }
+
+
 
         } else {
             $this->pageload("Dashboard", "freeLearning", [
@@ -66,6 +76,7 @@ class DashboardController extends AbstractController {
         $jerry = $this->userDatabase->getSingleUser(3);
         $summer = $this->userDatabase->getSingleUser(4);
         
+        if ($_SESSION["login"]) {
             $this->pageload("Dashboard", "teachers", [ 
                 # AUF DIE GENAUE SCHREIBWEISE ACHTEN
                 "rick" => $rick,
@@ -74,6 +85,10 @@ class DashboardController extends AbstractController {
                 "summer" => $summer,
     
                 ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+
         }
 
 

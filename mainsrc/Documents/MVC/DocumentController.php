@@ -22,12 +22,17 @@ class DocumentController extends AbstractController {
             $this->documentDatabase->newDocument($documentname, $documentdescription, $userid);
         }
  
+        if ($_SESSION["login"]) {
         /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
          *  directory, page und das Array mit den variablen */
         $this->pageload("Documents", "allDocuments", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "allDocuments" => $allDocuments,
             ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+
     }
 
     public function ajaxNewDocumentFunction(){
@@ -88,12 +93,18 @@ class DocumentController extends AbstractController {
             }
 
         }
+        if ($_SESSION["login"]) {
+            /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
+             *  directory, page und das Array mit den variablen */
+            $this->pageload("Documents", "documentsettings", [ 
+                # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                "singleDocument" => $singleDocument,
+                "error" => $error,
+                ]);
+            }   else {
+                header("Location: /Login"); 
+            }
 
-        $this->pageload("Documents", "documentsettings", [ 
-            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
-            "singleDocument" => $singleDocument,
-            "error" => $error,
-            ]);
     }
 
     public function ajaxUpdateDocumentFunction(){

@@ -18,22 +18,34 @@ class UserController extends AbstractController {
 
         $getmembers = $this->userDatabase->getMembers();
 
-        $this->pageload("Users", "userlink", [ 
-            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
-            "getmembers" => $getmembers,
-            ]);
+        if ($_SESSION["login"]) {
+            $this->pageload("Users", "userlink", [ 
+                # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                "getmembers" => $getmembers,
+                ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+
     }
 
-    public function userprofile() {
-    $userid = $_GET["userid"];
-    $singleUser = $this->userDatabase->getSingleUser($userid);
 
-        /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
-         *  directory, page und das Array mit den variablen */
-        $this->pageload("Users", "user", [ 
-            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
-            "singleUser" => $singleUser,
-            ]);
+
+    public function userprofile() {
+            $userid = $_GET["userid"];
+            $singleUser = $this->userDatabase->getSingleUser($userid);
+
+            if ($_SESSION["login"]) {
+                /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
+                 *  directory, page und das Array mit den variablen */
+                $this->pageload("Users", "user", [ 
+                    # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                    "singleUser" => $singleUser,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+            }
+
     }
 
 
@@ -85,8 +97,7 @@ class UserController extends AbstractController {
         }
     }
 
-        /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
-         *  directory, page und das Array mit den variablen */
+    if ($_SESSION["login"]) {
         $this->pageload("Users", "userprofile", [ 
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "singleUser" => $singleUser,
@@ -95,28 +106,12 @@ class UserController extends AbstractController {
             "emailFail" => $emailFail,
 
             ]);
+    }   else {
+        header("Location: /Login"); 
     }
 
 
-
-
-    public function teacherProfile() {    
-
-    $rick = $this->userDatabase->getSingleUser(1);
-    $morty = $this->userDatabase->getSingleUser(2);
-    $jerry = $this->userDatabase->getSingleUser(3);
-    $summer = $this->userDatabase->getSingleUser(4);
-    
-        $this->pageload("Users", "teachers", [ 
-            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
-            "rick" => $rick,
-            "morty" => $morty,
-            "jerry" => $jerry,
-            "summer" => $summer,
-
-            ]);
     }
-
 
 
  
