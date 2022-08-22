@@ -24,10 +24,28 @@ class DashboardController extends AbstractController {
          * HIER kann man dann auch weitere Seiten hinzufügen, die Nur über einen Login
          * erreichbar sein sollen. oder auch noch auf andere Sachen prüfen über die Session variable*/
 
+    //     if ($_SESSION["login"]) {
+    //             $this->pageload("Dashboard", "userDashboard", [
+    //                 "singleUser" => $singleUser,
+    //             ]);
+    //         }   else {
+    //             header("Location: /Login"); 
+    //         }
+           
+    // }
         if ($_SESSION["login"]) {
+
+            if ($_SESSION["status"] === "teacher") {
+                $this->pageload("Dashboard", "teacherDashboard", [
+                    "singleUser" => $singleUser,
+                ]);
+            }
+            if ($_SESSION["status"] === "student") {
                 $this->pageload("Dashboard", "userDashboard", [
                     "singleUser" => $singleUser,
                 ]);
+            }
+
             }   else {
                 header("Location: /Login"); 
             }

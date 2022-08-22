@@ -87,6 +87,7 @@ class LoginAuth {
                 $_SESSION["userid"] = $user->userid;
                 $_SESSION["username"] = $user->username;
                 $_SESSION["membership"] = $user->membership;
+                $_SESSION["status"] = $user->status;
                 $_SESSION["login"] = true;
                return true; 
            } else {
