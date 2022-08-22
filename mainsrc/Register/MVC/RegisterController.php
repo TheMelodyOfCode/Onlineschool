@@ -38,6 +38,7 @@ class RegisterController extends AbstractController{
             $password_confirm = $_POST["password_confirm"];
             $membership =  $_POST["membership"];
             $bio = $_POST["bio"];
+            $status = $_POST["status"];
             $submit = $_POST["submit"];
 
 
@@ -61,7 +62,7 @@ class RegisterController extends AbstractController{
 
                     $password_hash = password_hash($password, PASSWORD_DEFAULT);
                     #speichert den user ein
-                    $this->userDatabase->newUser($firstname,$lastname,$username,$email,$password_hash, $membership, $bio);
+                    $this->userDatabase->newUser($firstname,$lastname,$username,$email,$password_hash, $membership, $bio, $status);
                     #Grundeinstellungen zum Email versenden nach der Registrierung
                     // $this->PHPMailer->isSMTP();
                     // $this->PHPMailer->Host = "smtp.NAMEOFEmailPROVIDER.com";
