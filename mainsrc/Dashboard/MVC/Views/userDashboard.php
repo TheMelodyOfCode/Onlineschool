@@ -22,7 +22,7 @@
 
       <div class="col">
             <div class="card">
-                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
+                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Your learning Area</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -34,7 +34,7 @@
         <div class="col">
 
         <div class="card">
-                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/photo-64.png" class="card-img-top" alt="...">
+                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/photo-64.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Your Documents and Homework</h5>
                     <p class="card-text">Upload your homework here. <br>
@@ -47,7 +47,7 @@
         <div class="col">
 
         <div class="card">
-        <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/users-96.png" class="card-img-top" alt="...">
+        <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/users-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"> Students </h5>
                     <p class="card-text"> Get in contact with your fellow students and learn together</p>
@@ -61,7 +61,7 @@
         <div class="col">
 
         <div class="card">
-                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/UserDashboard/MVC/Views/Medien/user-96.png" class="card-img-top" alt="...">
+                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/user-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Update your Profile</h5>
                     <p class="card-text">Here you can make changes to your Name, Email and Password</p>
