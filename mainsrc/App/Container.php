@@ -1,14 +1,11 @@
 <?php
 namespace App\App;
 
-use App\Articles\ArticleDatabase;
-use App\Articles\MVC\ArticleController;
+
 use App\Home\MVC\IndexController;
 use App\Home\IndexDatabase;
 use App\Error\MVC\ErrorController;
 use App\Connections\ConToMySQL;
-// use App\Teachers\MVC\TeacherController;
-// use App\Teachers\TeacherDatabase;
 use App\Users\MVC\UserController;
 use App\Users\Userdatabase;
 use App\Register\MVC\RegisterController;
@@ -19,7 +16,8 @@ use App\Login\MVC\LoginController;
 use App\Login\MVC\LoginAuth;
 use App\Logout\MVC\LogoutController;
 use App\SecurityLogin\SecurityLoginDatabase;
-use App\UserDashboard\MVC\UserDashboardController;
+
+use App\Dashboard\MVC\DashboardController;
 use App\Photoalbum\MVC\PhotoalbumController;
 use App\Photoalbum\PhotoalbumDatabase;
 use App\Documents\MVC\DocumentController;
@@ -64,9 +62,11 @@ class Container {
             'photoalbumDatabase' => function(){
                 return new PhotoalbumDatabase($this->build("pdo"));
             },
-            'userDashboardController' => function(){
-                return new UserDashboardController($this->build("userDatabase"));
+
+            'dashboardController' => function(){
+                return new DashboardController($this->build("userDatabase"));
             },
+
             'logoutController' => function(){
                 return new LogoutController($this->build("securityLoginDatabase"));
             },
@@ -116,19 +116,6 @@ class Container {
             'container' => function(){
                 return new Container();
             },
-            'articleController' => function(){
-                return new ArticleController($this->build("articleDatabase"));
-            },
-            'articleDatabase' => function(){
-                return new ArticleDatabase($this->build('pdo'));
-            },
-
-            // 'teacherController' => function(){
-            //     return new TeacherController($this->build("teacherDatabase"));
-            // },
-            // 'teacherDatabase' => function(){
-            //     return new TeacherDatabase($this->build('pdo'));
-            // },
             'userController' => function(){
                 return new UserController($this->build("userDatabase"));
             },

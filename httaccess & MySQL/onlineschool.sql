@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 18. Aug 2022 um 15:35
+-- Erstellungszeit: 22. Aug 2022 um 09:31
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.4
 
@@ -61,7 +61,8 @@ CREATE TABLE `documents` (
 --
 
 INSERT INTO `documents` (`documentid`, `userid`, `documentname`, `documentdescription`, `document`) VALUES
-(115, 59, 'erwerter', 'rert                   ', '59_18.08.2022.pdf');
+(115, 59, 'erwerter', 'rert                   ', '59_18.08.2022.pdf'),
+(117, 59, 'pdf doc', 'pdf doc', '59_19.08.2022.pdf');
 
 -- --------------------------------------------------------
 
@@ -82,8 +83,7 @@ CREATE TABLE `photoalbum` (
 --
 
 INSERT INTO `photoalbum` (`albumid`, `userid`, `albumname`, `albumdescription`, `albumcover`) VALUES
-(93, 57, 'Spock', 'Spock Image', '5793.png'),
-(94, 60, 'mein album', 'ich bindas albm        ', '6094.png');
+(95, 59, 'Rick', 'neu     ', '5995.png');
 
 -- --------------------------------------------------------
 
@@ -113,32 +113,6 @@ INSERT INTO `securitytokens` (`id`, `userid`, `identifier`, `securitytoken`) VAL
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `teachers`
---
-
-CREATE TABLE `teachers` (
-  `userid` int(12) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `mail` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `bio` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Daten für Tabelle `teachers`
---
-
-INSERT INTO `teachers` (`userid`, `firstname`, `lastname`, `username`, `mail`, `password`, `bio`) VALUES
-(1, 'Summer', 'Smith', 'Summer', 'summer@test', '123', 'Summer Smith is Morty\'s 17-year-old  older sister, a more conventional and often superficial teenager, who is obsessed with improving her status among her peers.'),
-(2, 'Rick', 'Sanchez', 'Rick', 'rick@test', '123', 'Rick is an eccentric and alcoholic mad scientist, who eschews many ordinary conventions such as school, marriage, love, and family.'),
-(3, 'Jerry', 'Smith', 'Jerry', 'Jerry@test', '123', 'Jerry Smith is Summer and Morty\'s insecure 34-year-old father, Beth\'s husband, and Rick\'s son-in-law, who strongly disapproves of Rick\'s influence over his family. '),
-(4, 'Morty', 'Smith', 'Morty', 'morty@test', '123', 'Mortimer \"Morty\" Smith is Rick\'s neurotic 14-year-old grandson who is frequently dragged into Rick\'s misadventures.');
-
--- --------------------------------------------------------
-
---
 -- Tabellenstruktur für Tabelle `users`
 --
 
@@ -149,18 +123,23 @@ CREATE TABLE `users` (
   `username` varchar(16) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `bio` varchar(500) NOT NULL
+  `bio` varchar(500) NOT NULL,
+  `membership` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`userid`, `firstname`, `lastname`, `username`, `mail`, `password`, `bio`) VALUES
-(57, 'Scary', 'Terry', 'Scary T.', 's@t', '$2y$10$9qdPx2qb0zOaN93VUDeC8ujnnjmZRIwHvyuqo7OFcp2XPrsBPaF1y', '   A murderous entity who resides in the dream world. He is a \"legally safe\" parody of Freddy Krueger and has miniature swords on his fingers instead of knives. He initially tries to kill Rick and Morty, but later befriends them after they help him with his own dream problems. He is very fond of the word \"bitch\", and injects it into almost every sentence. It is revealed that scaring is simply an occupation for him, and that he is very insecure about his capabilities, which puts him under great s'),
-(58, 'Bird', 'person', 'Birdperson ', 'b@p', '$2y$10$Eo54fe4hTHQgzNgxE9GN8ueke8Dyy1GU8JwLWLYigTIDooHdizc9W', '    A superhero-like being who is Rick\'s best friend. He holds a deep respect for Rick, and often offers Morty insight when Morty considers doing something that would jeopardize his and Rick\'s relationship. He was at one point in a band with Rick and Squanchy.'),
-(59, 'Squan', 'Chy', 'Squanchy ', 's@c', '$2y$10$P0tqDJ8Yf.X9ElT9y1M3beYAhwLjaNztwzK1ITWfciIfDQFDjaLgu', '   A disheveled catlike creature who replaces various words in his sentences with the word \"squanch\". He is a parody of Snarf. Squanchy is one of Rick\'s best friends and wears a bracelet inscribed with \"Rick\'s BFF\".'),
-(60, 'Diana', 'Sanchez', 'Diana', 'Diana@test', '$2y$10$xA4ttJAPzJhNQOVmjc6TJOfcdNnzck6aAVQklyt5MSboH2d5LGNI2', '   Diane was Rick\'s wife. She is seen in a flashback during the Season 3 premiere entering the garage with a young Beth. As Rick vows to give up science, they prepare to go for ice cream when Diane was killed by a bomb sent through a portal created by another Rick as revenge for the main Rick refusing to join him. Rick then decides to become a scientist again to avenge his family. ');
+INSERT INTO `users` (`userid`, `firstname`, `lastname`, `username`, `mail`, `password`, `bio`, `membership`) VALUES
+(1, 'Summer', 'Smith', 'Summer', 'summer@test', '$2y$10$F80LaRuutzxlnvsn4VyhMup9GXlq/KWEk.7PyQGGf1t9kgmka8MZa', '   Summer Smith is Morty\'s 17-year-old  older sister, a more conventional and often superficial teenager, who is obsessed with improving her status among her peers.', 'teacher'),
+(2, 'Rick', 'Sanchez', 'Rick', 'r@s', '123', 'Rick is an eccentric and alcoholic mad scientist, who eschews many ordinary conventions such as school, marriage, love, and family.', 'teacher'),
+(3, 'Jerry', 'Smith', 'Jerry', 'j@s', '123', 'Jerry Smith is Summer and Morty\'s insecure 34-year-old father, Beth\'s husband, and Rick\'s son-in-law, who strongly disapproves of Rick\'s influence over his family. ', 'teacher'),
+(4, 'Morty', 'Smith', 'Morty', 'm@s', '123', 'Mortimer \"Morty\" Smith is Rick\'s neurotic 14-year-old grandson who is frequently dragged into Rick\'s misadventures.', 'teacher'),
+(57, 'Scary', 'Terry', 'Scary T.', 's@t', '$2y$10$9qdPx2qb0zOaN93VUDeC8ujnnjmZRIwHvyuqo7OFcp2XPrsBPaF1y', '   A murderous entity who resides in the dream world. He is a \"legally safe\" parody of Freddy Krueger and has miniature swords on his fingers instead of knives. He initially tries to kill Rick and Morty, but later befriends them after they help him with his own dream problems. He is very fond of the word \"bitch\", and injects it into almost every sentence. It is revealed that scaring is simply an occupation for him, and that he is very insecure about his capabilities, which puts him under great s', 'enterprise'),
+(58, 'Bird', 'person', 'Birdperson ', 'b@p', '$2y$10$Eo54fe4hTHQgzNgxE9GN8ueke8Dyy1GU8JwLWLYigTIDooHdizc9W', '    A superhero-like being who is Rick\'s best friend. He holds a deep respect for Rick, and often offers Morty insight when Morty considers doing something that would jeopardize his and Rick\'s relationship. He was at one point in a band with Rick and Squanchy.', 'pro'),
+(59, 'Squan', 'Chy', 'Squanchy', 's@c', '$2y$10$Jk2tiKDGezL3LHU.uC.5p.KLAkJqlg1J22pd0AlPaYHJgdxYTYsRS', 'A disheveled catlike creature who replaces various words in his sentences with the word \"squanch\". \r\nHe is a parody of Snarf. \r\nSquanchy is one of Rick\'s best friends and wears a bracelet inscribed with \"Rick\'s BFF\".        ', 'pro'),
+(60, 'Diana', 'Sanchez', 'Diana', 'Diana@test', '$2y$10$xA4ttJAPzJhNQOVmjc6TJOfcdNnzck6aAVQklyt5MSboH2d5LGNI2', '   Diane was Rick\'s wife. She is seen in a flashback during the Season 3 premiere entering the garage with a young Beth. As Rick vows to give up science, they prepare to go for ice cream when Diane was killed by a bomb sent through a portal created by another Rick as revenge for the main Rick refusing to join him. Rick then decides to become a scientist again to avenge his family. ', 'free');
 
 --
 -- Indizes der exportierten Tabellen
@@ -191,12 +170,6 @@ ALTER TABLE `securitytokens`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `teachers`
---
-ALTER TABLE `teachers`
-  ADD PRIMARY KEY (`userid`);
-
---
 -- Indizes für die Tabelle `users`
 --
 ALTER TABLE `users`
@@ -216,31 +189,25 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT für Tabelle `documents`
 --
 ALTER TABLE `documents`
-  MODIFY `documentid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `documentid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT für Tabelle `photoalbum`
 --
 ALTER TABLE `photoalbum`
-  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT für Tabelle `securitytokens`
 --
 ALTER TABLE `securitytokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT für Tabelle `teachers`
---
-ALTER TABLE `teachers`
-  MODIFY `userid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

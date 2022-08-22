@@ -6,7 +6,6 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Welcome Home <?php echo $singleUser->username ?></h1>
-        <!-- <h1 class="fw-light">Welcome Home <?php //echo var_dump($_SESSION) ?></h1> -->
         <br>
         <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
       </div>

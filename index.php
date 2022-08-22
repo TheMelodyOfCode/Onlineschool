@@ -56,33 +56,24 @@ require_once "init.php";
     elseif ($request == "/Users/userprofile") {
         $router->add("userController", "updateUserProfile");
     } 
-    elseif ($request == "/UserDashboard/learningArea") {
-        $router->add("userController", "checkMembership");
+    elseif ($request == "/LearningArea") {
+        $router->add("dashboardController", "checkMembership");
     } 
     #-----------------------------------------------------
     #Teachers
     elseif ($request == "/Teachers") {
-        $router->add("userDashboardController", "teacherProfile");
+        $router->add("dashboardController", "teacherProfile");
     } 
-    #-----------------------------------------------------
-    #Articles
-    elseif ($request == "/Articles/about"){
-        $router->add("articleController", "about");
-    }
-    elseif ($request == "/Articles/products"){
-        $router->add("articleController", "products");
-    }
+
     #-----------------------------------------------------
     # User Dashboard nach Login
     elseif ($request == "/Dashboard"){
-        $router->add("userDashboardController", "userDashboard");
+        $router->add("dashboardController", "userDashboard");
     }
-    // elseif ($request == "/Dashboard"){
-    //     $router->add("userDashboardController", "userInformation");
-    // }
+
 
     #-----------------------------------------------------
-    # Document Dashboard nach Login
+    # Document Dashboard 
     elseif ($request == "/Documents"){
         $router->add("documentController", "allDocuments");
     }
