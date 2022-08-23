@@ -121,12 +121,12 @@
                         <li><a href="/Dashboard" class="nav-link px-2 text-white"><i class="fa-solid fa-book-open"></i> Your Area</a></li>
                   </ul>
   
-
+                <!-- TODO: fix drop down issue -->
                 <div class="dropdown text-end">
-                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="/Dashboard" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="/onlineschool/mainsrc/src/img/fav/watchout2.png" alt="mdo" width="64" height="64" class="rounded-circle">
-
                 </a>
+                
                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                       <li><a class="dropdown-item" href="/Login">Settings</a></li>
                       <li><a class="dropdown-item" href="/Login">Profile</a></li>
