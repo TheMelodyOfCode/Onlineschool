@@ -13,7 +13,7 @@ class DocumentController extends AbstractController {
 
     public function allDocuments(){
 
-        $allDocuments = $this->documentDatabase->getAllDocuments($_SESSION["userid"]);
+        $allDocuments = $this->documentDatabase->getAllDocumentsByUserid($_SESSION["userid"]);
 
         if(!empty($_POST["newdocument"])) {
             $documentname = $_POST["documentname"];
@@ -32,7 +32,29 @@ class DocumentController extends AbstractController {
         }   else {
             header("Location: /Login"); 
         }
+    }
 
+    public function allDocumentsForTeachers(){
+
+        $allDocuments = $this->documentDatabase->getAllDocuments();
+
+        if(!empty($_POST["newdocument"])) {
+            $documentname = $_POST["documentname"];
+            $documentdescription = $_POST["documentdescription"];
+            $userid = $_POST["userid"];
+            $this->documentDatabase->newDocument($documentname, $documentdescription, $userid);
+        }
+ 
+        if ($_SESSION["login"]) {
+        /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
+         *  directory, page und das Array mit den variablen */
+        $this->pageload("Documents", "allDocuments", [ 
+            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+            "allDocuments" => $allDocuments,
+            ]);
+        }   else {
+            header("Location: /Login"); 
+        }
     }
 
     public function ajaxNewDocumentFunction(){
@@ -47,7 +69,7 @@ class DocumentController extends AbstractController {
 
     public function ajaxPageDocument(){
 
-        $allDocuments = $this->documentDatabase->getAllDocuments($_SESSION["userid"]);
+        $allDocuments = $this->documentDatabase->getAllDocumentsByUserid($_SESSION["userid"]);
         /** Es soll nur der Bereich der Album Seite geladen werden 
          * und nicht die ganze Seite! */
         $this->pageload("Documents", "ajaxPageDocument", [
@@ -60,7 +82,7 @@ class DocumentController extends AbstractController {
     /** @todo add doc and txt files for upload */
     public function documentsettings(){
 
-        $userid = $_SESSION['userid'];
+        $username = $_SESSION["username"];
         $documentid = $_GET['documentid'];
         $singleDocument = $this->documentDatabase->getSingleDocument( $documentid);
         
@@ -78,7 +100,7 @@ class DocumentController extends AbstractController {
                  * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
                 $date = date("d.m.Y");
                 // $newfilename = $userid . "_" . $uploadfilename ;
-                $newfilename = $userid . "_" . $date . ".pdf";
+                $newfilename = $username . "_" . $date . ".pdf";
                 
                 if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
                     // $this->documentDatabase->updateDocument($newfilename, $documentid);

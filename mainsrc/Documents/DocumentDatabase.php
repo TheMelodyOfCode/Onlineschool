@@ -19,21 +19,34 @@ class DocumentDatabase extends AbstractDatabase {
     }
 
 
-function getAllDocuments($userid){ 
-        $table = $this->getTable();
-        $model = $this->getModel();
-    
-        if (!empty($this->pdo)){
-            $allDocuments = $this->pdo->prepare("SELECT * FROM $table WHERE `userid` = :userid ");
-            $allDocuments->execute([
-                'userid' => $userid
-            ]);
-            $allDocuments->setFetchMode(PDO::FETCH_CLASS, $model);
-            $documentsDATA = $allDocuments->fetchAll(PDO::FETCH_CLASS);
-            }
-            return $documentsDATA;
-    }
-    
+    function getAllDocuments(){ 
+            $table = $this->getTable();
+            $model = $this->getModel();
+        
+            if (!empty($this->pdo)){
+                $allDocuments = $this->pdo->prepare("SELECT * FROM $table" );
+                $allDocuments->execute();
+                $allDocuments->setFetchMode(PDO::FETCH_CLASS, $model);
+                $documentsDATA = $allDocuments->fetchAll(PDO::FETCH_CLASS);
+                }
+                return $documentsDATA;
+        }
+
+    function getAllDocumentsByUserid($userid){ 
+            $table = $this->getTable();
+            $model = $this->getModel();
+        
+            if (!empty($this->pdo)){
+                $allDocuments = $this->pdo->prepare("SELECT * FROM $table WHERE `userid` = :userid ");
+                $allDocuments->execute([
+                    'userid' => $userid
+                ]);
+                $allDocuments->setFetchMode(PDO::FETCH_CLASS, $model);
+                $documentsDATA = $allDocuments->fetchAll(PDO::FETCH_CLASS);
+                }
+                return $documentsDATA;
+        }
+        
     
     /** Dadurch das hier prepare & ein Platzhalter verwendet wird kann die URL NICHT mehr gehackt werden */
     function getSingleDocument($documentid){ 

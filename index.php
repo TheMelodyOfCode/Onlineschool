@@ -73,7 +73,12 @@ require_once "init.php";
 
 
     #-----------------------------------------------------
-    # Document Dashboard 
+    # Documents for Teachers
+    elseif ($request == "/TeacherDocs"){
+        $router->add("documentController", "allDocumentsForTeachers");
+    }
+    #-----------------------------------------------------
+    # Documents
     elseif ($request == "/Documents"){
         $router->add("documentController", "allDocuments");
     }

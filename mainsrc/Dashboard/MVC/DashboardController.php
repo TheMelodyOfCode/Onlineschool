@@ -35,12 +35,12 @@ class DashboardController extends AbstractController {
     // }
         if ($_SESSION["login"]) {
 
-            if ($_SESSION["status"] === "teacher") {
+            if ($_SESSION["status"] === "Teacher") {
                 $this->pageload("Dashboard", "teacherDashboard", [
                     "singleUser" => $singleUser,
                 ]);
             }
-            if ($_SESSION["status"] === "student") {
+            if ($_SESSION["status"] === "Student") {
                 $this->pageload("Dashboard", "userDashboard", [
                     "singleUser" => $singleUser,
                 ]);
