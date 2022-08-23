@@ -64,7 +64,7 @@
             </div>
             <div class="form-check col col-3">
               <input id="paypal" name="membership" value="enterprise" type="radio" class="form-check-input" >
-              <input id="status" name="status" value="student" type="hidden" class="form-check-input" >
+              <input id="status" name="status" value="Student" type="hidden" class="form-check-input" >
               <label class="form-check-label" for="paypal">Enterprise</label>
             </div>
         </div>

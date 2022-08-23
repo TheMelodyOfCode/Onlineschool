@@ -45,9 +45,10 @@ class UserDatabase extends AbstractDatabase {
             $singleUser->setFetchMode(PDO::FETCH_CLASS, $model);
             $usersdata = $singleUser->fetch(PDO::FETCH_CLASS);
        }
-       return $usersdata;
-       
+       return $usersdata;   
     }
+
+
 
 function newUser($firstname,$lastname,$username,$email,$password, $membership, $bio, $status){ 
 

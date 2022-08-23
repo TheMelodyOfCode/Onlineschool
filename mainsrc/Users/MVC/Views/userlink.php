@@ -22,9 +22,9 @@
             <div style="background-color: #8C540C" class="feature-icon  bg-gradient">
               <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
             </div>
-            <a href="/Users/userlink?userid=<?php echo $user->userid ?>"><h3><?php echo $user->username ?></h3></a>
+            <a href="/Users/userlink?userid=<?php  echo $user->userid ?>"><h3><?php  echo $user->username ?></h3></a>
         </div>
-    <?php endforeach; ?>   
+    <?php  endforeach; ?>   
  
     </div>
   </div>

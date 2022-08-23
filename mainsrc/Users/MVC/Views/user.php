@@ -6,7 +6,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content rounded-6 shadow">
       <div class="modal-body p-5">
-        <h2 class="fw-bold mb-0"><?php echo $singleUser->username;?></h2>
+        <h2 class="fw-bold mb-0"><?php echo $singleUser->username;?></h2> <h4>(<?php echo $singleUser->status;?>)</h4>
 
         <ul class="d-grid gap-4 my-5 list-unstyled">
           <li class="d-flex gap-4">

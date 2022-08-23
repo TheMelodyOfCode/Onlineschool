@@ -26,10 +26,7 @@ class UserController extends AbstractController {
         }   else {
             header("Location: /Login"); 
         }
-
     }
-
-
 
     public function userprofile() {
             $userid = $_GET["userid"];
@@ -45,7 +42,6 @@ class UserController extends AbstractController {
             }   else {
                 header("Location: /Login"); 
             }
-
     }
 
 
