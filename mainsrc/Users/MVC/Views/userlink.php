@@ -17,7 +17,8 @@
     <div class="text-center container">
       <div class="row row-cols-1 row-cols-sm-4 row-cols-md-4">
 
-    <?php     foreach ($getmembers AS $user):  ?>
+    <?php     foreach ($getStudents AS $user):  ?>
+      <?php   //  echo var_dump($getmembers)  ?>
         <div class="col my-3">
             <div style="background-color: #8C540C" class="feature-icon  bg-gradient">
               <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>

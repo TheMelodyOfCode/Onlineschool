@@ -28,6 +28,20 @@ class UserController extends AbstractController {
         }
     }
 
+    public function getAllStudents() {
+
+        $getStudents = $this->userDatabase->getStudents();
+
+        if ($_SESSION["login"]) {
+            $this->pageload("Users", "userlink", [ 
+                # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                "getStudents" => $getStudents,
+                ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+    }
+
     public function userprofile() {
             $userid = $_GET["userid"];
             $singleUser = $this->userDatabase->getSingleUser($userid);

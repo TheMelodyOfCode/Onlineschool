@@ -30,6 +30,20 @@ class UserDatabase extends AbstractDatabase {
             }
             return $memberdata;
     }
+    
+    function getStudents(){ 
+    
+        $table = $this->getTable();
+        $model = $this->getModel();
+
+        if (!empty($this->pdo)){
+            $members = $this->pdo->prepare("SELECT * FROM $table WHERE `status` = 'student'");
+            $members->execute();
+            $members->setFetchMode(PDO::FETCH_CLASS, $model);
+            $memberdata = $members->fetchAll(PDO::FETCH_CLASS);
+            }
+            return $memberdata;
+    }
 
     function getSingleUser($userID){ 
 

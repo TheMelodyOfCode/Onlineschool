@@ -45,7 +45,7 @@ require_once "init.php";
     #-----------------------------------------------------
     #Users
     elseif ($request == "/Users" ){
-        $router->add("userController","getAllUsers");
+        $router->add("userController","getAllStudents");
     }
     elseif ($request == "/Users=user"){
         $router->add("userController", "userprofile");

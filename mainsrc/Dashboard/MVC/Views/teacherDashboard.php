@@ -38,7 +38,7 @@
                     <h5 class="card-title">Documents and Homework of your Students</h5>
                     <p class="card-text">
                      Here you can access and check all student documents</p>
-                    <a href="/TeacherDocs" class="btn btn-success">Go to your documents</a>
+                    <a href="/TeacherDocs" class="btn btn-success">Go to documents</a>
                 </div>
             </div>
         </div>
@@ -49,8 +49,8 @@
         <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/users-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"> Students </h5>
-                    <p class="card-text"> Get in contact with your fellow students and learn together</p>
-                    <a href="/Users" class="btn btn-success">See who's also studying</a>
+                    <p class="card-text"> Information about all students</p>
+                    <a href="/Users" class="btn btn-success">See who's there</a>
                 </div>
             </div>
         </div>
