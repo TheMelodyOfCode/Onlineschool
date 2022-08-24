@@ -18,21 +18,9 @@
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
-
+        
       <div class="col">
-            <div class="card">
-                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Your learning Area</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="/UserDashboard/learningArea" class="btn btn-success">Go to your learning Area</a>
-                    </div>
-            </div>
-        </div>
-
-        <div class="col">
-
-        <div class="card">
+      <div class="card">
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/photo-64.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Documents and Homework of your Students</h5>
@@ -42,6 +30,19 @@
                 </div>
             </div>
         </div>
+
+      <div class="col">
+            <div class="card">
+                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Documents</h5>
+                        <p class="card-text">Here is some space for your Documents</p>
+                        <a href="/Documents" class="btn btn-success">Go to documents</a>
+                    </div>
+            </div>
+        </div>
+
+        
 
         <div class="col">
 

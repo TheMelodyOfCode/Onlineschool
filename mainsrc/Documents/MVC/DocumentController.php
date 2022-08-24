@@ -57,26 +57,6 @@ class DocumentController extends AbstractController {
         }
     }
 
-    public function ajaxNewDocumentFunction(){
-        /** Die Funktion wird an Javascript übergeben und befüllt
-         * dann die posts wieder darum wird auch ein !empty nicht benötigt*/
-        $documentname = $_POST["documentname"];
-        $documentdescription = $_POST["documentdescription"];
-        $userid = $_POST["userid"];
-        $this->documentDatabase->newDocument($documentname, $documentdescription, $userid);
-    }
-
-
-    public function ajaxPageDocument(){
-
-        $allDocuments = $this->documentDatabase->getAllDocumentsByUserid($_SESSION["userid"]);
-        /** Es soll nur der Bereich der Album Seite geladen werden 
-         * und nicht die ganze Seite! */
-        $this->pageload("Documents", "ajaxPageDocument", [
-            "allDocuments" => $allDocuments,
-        ]);
-    }
-
 
 
     /** @todo add doc and txt files for upload */
@@ -129,14 +109,23 @@ class DocumentController extends AbstractController {
 
     }
 
+    public function ajaxNewDocumentFunction(){
+        /** Die Funktion wird an Javascript übergeben und befüllt
+         * dann die posts wieder darum wird auch ein !empty nicht benötigt*/
+        $documentname = $_POST["documentname"];
+        $documentdescription = $_POST["documentdescription"];
+        $userid = $_POST["userid"];
+        $this->documentDatabase->newDocument($documentname, $documentdescription, $userid);
+    }
+
+    
     public function ajaxUpdateDocumentFunction(){
-
-
         $documentname = $_POST["documentname"];
         $documentdescription = $_POST["documentdescription"];
         $documentid = $_POST["documentid"];
         $this->documentDatabase->updateDocumentInformation($documentname, $documentdescription, $documentid);
-        
+
+
     }
 
     // TODO: delete document from folder as well
@@ -144,7 +133,18 @@ class DocumentController extends AbstractController {
 
         $documentid = $_GET["documentid"];
         $this->documentDatabase->deleteDocument($documentid);
-        header("Location: /Documents"); 
+        // TODO: fix reload page instead of route to dashboard
+        header("Location: /Dashboard"); 
+    }
+
+    public function ajaxPageDocument(){
+
+        $allDocuments = $this->documentDatabase->getAllDocumentsByUserid($_SESSION["userid"]);
+        /** Es soll nur der Bereich der Album Seite geladen werden 
+         * und nicht die ganze Seite! */
+        $this->pageload("Documents", "ajaxPageDocument", [
+            "allDocuments" => $allDocuments,
+        ]);
     }
 
     public function ajaxDisplaySingleDocumentSettingsPage(){

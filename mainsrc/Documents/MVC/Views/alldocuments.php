@@ -5,9 +5,9 @@
 <section class="mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <!-- TODO: change session to variabe with render -->
+        <!-- TODO: change session to variable with render -->
       <h1 class="fw-light">Your Documents <?php echo $_SESSION["username"] ?></h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p class="lead text-muted">Here you can create a new Dokument or update your document Title and description</p>
       </div>
     </div>
   </section>

@@ -18,7 +18,7 @@
             <div class="col-lg-6 col-md-8 mx-auto">
             <?php //echo var_dump($_POST["documentname"]) ?>
             <div class="container">
-                <a href="/Documents"><button class="btn btn-secondary">Zurück</button></a>
+                <a href="/Dashboard"><button class="btn btn-secondary">Zurück</button></a>
             </div>
             <br>
 
@@ -27,7 +27,6 @@
                     <div id="reloadDocumentSettingsForm">
                     <?php require_once __DIR__ . "../../../../../mainsrc/Documents/MVC/Views/ajaxDocumentSettingsForm.php" ?>
                     </div>
-                    
                     <input type="hidden" name="documentid" value="<?php echo $_GET['documentid'] ?>">
                     <button type="submit" class="btn btn-secondary" name="send" value="send">Speichern</button>
                 </form>
