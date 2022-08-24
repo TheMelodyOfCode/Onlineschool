@@ -83,17 +83,19 @@ function getAlbumByUserID($userid){
     }
     
     
-    function deletAlbum($albumname){ 
+    function deletePhoto($albumid){ 
     
         // $albumname = "BlupBla";
         $table = $this->getTable();
         if (!empty($this->pdo)){
-           $statement = $this->pdo->prepare("DELETE FROM $table WHERE albumname = :albumname");
+           $statement = $this->pdo->prepare("DELETE FROM $table WHERE albumid = :albumid");
            $statement->execute([
-            'albumname' => $albumname
+            'albumid' => $albumid
            ]);
         }
     }
+
+
     
     
     function updateAlbumInformation($albumname, $albumdescription, $albumid){ 

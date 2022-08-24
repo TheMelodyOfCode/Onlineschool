@@ -139,6 +139,16 @@ class PhotoalbumController extends AbstractController {
 
     }
 
+        // TODO: delete document from folder as well
+
+        public function ajaxDeletePhoto(){
+
+            $albumid = $_GET["albumid"];
+            $this->PhotoalbumDatabase->deletePhoto($albumid);
+            // TODO: fix reload page instead of route to dashboard
+            header("Location: /Dashboard"); 
+        }
+
 
 
 

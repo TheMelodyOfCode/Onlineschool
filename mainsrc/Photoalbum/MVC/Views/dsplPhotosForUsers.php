@@ -21,13 +21,16 @@
 
 
         <?php foreach($allAlbums As $item) : ?>
-          <div class="col-lg-4">
-            <div  class="card">
-              <img
+          <div class="col-lg-4 my-2">
+            <div  class="card" style="max-width: 300px">
+              <a href="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>"> 
+              <img style="max-width: 300px"
                 src="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>"
-                class="card-img-top img-fluid" 
-                alt="Waterfall"
+                class="card-img-top rounded mx-auto d-block" 
+       
+                alt="Waterfall" 
               />
+              </a>
               <div  class="card-body">
                 <h5 class="card-title"><?php  echo html($item->albumname) ?></h5>
                 <p class="card-text">

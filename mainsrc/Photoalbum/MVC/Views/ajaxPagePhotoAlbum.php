@@ -3,8 +3,8 @@
 <?php foreach($allAlbum As $item) : ?>
 
 
-    <div style="width: 200px; height: 330px" class="card ">
-        <img  src="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>" class="card-img-top" alt="...">
+    <div style="max-width: 300px; max-height: 600px" class="card my-2">
+        <img style="max-width: 300px; max-height: 200px" src="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php  echo html($item->albumname) ?></h5>
             <p class="card-text"><?php  echo html($item->albumdescription); ?></p>
@@ -12,10 +12,10 @@
         </div>
         
         <div class="btn-group">
-            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+            <a href="onlineschool/mainsrc/UploadPhotos/<?php  echo $item->albumcover ?>" class="btn btn-sm btn-outline-secondary">View</a>
             <a href="/Album=Settings?albumid=<?php  echo $item->albumid; ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
-          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
-          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+        <!--  TODO: delete file from folder on server -->
+        <a id="deletePhoto" href="/Photo-Delete?albumid=<?php echo $item->albumid; ?>" class="btn btn-sm btn-outline-secondary ">Delete</a>
         </div>
 
     </div>

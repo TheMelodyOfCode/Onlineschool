@@ -137,6 +137,7 @@ class DocumentController extends AbstractController {
         header("Location: /Dashboard"); 
     }
 
+    
     public function ajaxPageDocument(){
 
         $allDocuments = $this->documentDatabase->getAllDocumentsByUserid($_SESSION["userid"]);

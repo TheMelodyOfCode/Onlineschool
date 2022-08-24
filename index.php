@@ -136,7 +136,13 @@ require_once "init.php";
         $router->add("photoalbumController", "ajaxUpdateAlbumFunktion");
         # dann der View
         $router->add("photoalbumController", "ajaxDisplaySingleAlbumSettingsPage");
-    } 
+    }
+    elseif ($request == "/Photo-Delete"){
+        # erst die Funktion
+        $router->add("photoalbumController", "ajaxDeletePhoto");
+        // # dann der View
+        $router->add("photoalbumController", "ajaxPagePhotoAlbum");
+    }
     #-----------------------------------------------------
     #Error-Page
      else {

@@ -52,6 +52,6 @@
     alert("super");
 })
     </script> -->
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
+<?php  //require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 
 
