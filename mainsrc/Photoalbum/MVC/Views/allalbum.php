@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
+<?php require_once __DIR__ . "../../../../../mainsrc/Design/teacherheader.php"; ?>
 <?php // echo $album1->albumdescription; ?>
 
 
@@ -24,6 +24,7 @@
         data-userid="<?php  //echo $_SESSION["userid"] ?>" >New Album</button> -->
     <!-- </div> -->
     <?php  //var_dump($_POST) ?>
+    <div class="b-example-divider"></div>
     <div class="container ">
         
         <!-- Durch die Funktion .done in AjaxNewAlbum wird dieser Bereich neu geladen 
@@ -52,6 +53,7 @@
     alert("super");
 })
     </script> -->
-<?php  //require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
+    <div class="b-example-divider"></div>
+<?php  require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 
 

@@ -6,19 +6,19 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <!-- TODO: add gallery to Teacher section user are not supposed to uplaod photos -->
-      <h1 class="fw-light">Deine Alben <?php echo $_SESSION["username"] ?></h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <h1 class="fw-light">Gallery </h1>
+        <p class="lead text-muted">here are Photos of all last events</p>
       </div>
     </div>
   </section>
 
 
+  <div class="b-example-divider"></div>
 
-  <!-- Inner -->
+
+    <div class="container">
 
         <div class="row">
-
-
 
         <?php foreach($allAlbums As $item) : ?>
           <div class="col-lg-4 my-2">
@@ -46,8 +46,9 @@
 
         </div>
   <!-- Inner -->
-
+</div>
 <!-- Carousel wrapper -->
+<div class="b-example-divider"></div>
    <br>
    <br>
    <br>

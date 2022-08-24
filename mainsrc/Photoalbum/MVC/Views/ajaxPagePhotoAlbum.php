@@ -21,11 +21,11 @@
     </div>
     <?php endforeach; ?>
 
-    <form style="width: 225px;" method="Post" class="row" action="/Photoalbum" id="newAlbumForm">
+    <form style="max-width: 300px; max-height: 600px" method="Post" class="row" action="/Photoalbum" id="newAlbumForm">
         <input type="hidden" name="albumname" value="Neues Album">
         <input type="hidden" name="albumdescription" value="Ich bin ein neues Album">
         <input type="hidden" name="userid" value="<?php  echo $_SESSION['userid']; ?>">
-        <button style="height: 330px;" type="submit" class="btn btn-success" name="newalbum" value="send">New Album </button>
+        <button style="max-width: 300px; max-height: 600px" type="submit" class="btn btn-success" name="newalbum" value="send">New Album </button>
     </form>
     
 
