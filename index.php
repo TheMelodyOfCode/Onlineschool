@@ -113,10 +113,13 @@ require_once "init.php";
     #-----------------------------------------------------
         # Photoalbum Dashboard nach Login
         elseif ($request == "/Photoalbum"){
-            $router->add("photoalbumController", "allAlbum");
+            $router->add("photoalbumController", "albumByUserid");
         }
         elseif ($request == "/Album=Settings"){
             $router->add("photoalbumController", "albumsettings");
+        }
+        elseif ($request == "/Gallery"){
+            $router->add("photoalbumController", "allAlbums");
         }
     #-----------------------------------------------------
     # Photoalbum AJAX

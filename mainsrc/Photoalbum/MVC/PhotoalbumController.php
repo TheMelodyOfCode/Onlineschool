@@ -11,9 +11,32 @@ class PhotoalbumController extends AbstractController {
         $this->PhotoalbumDatabase = $photoalbumDatabase;
     }
 
-    public function allAlbum(){
+    public function allAlbums(){
 
-        $allAlbum = $this->PhotoalbumDatabase->getAllAlbum($_SESSION["userid"]);
+        $allAlbums = $this->PhotoalbumDatabase->getAllAlbums();
+
+        if(!empty($_POST["newalbum"])) {
+            $albumname = $_POST["albumname"];
+            $albumdescription = $_POST["albumdescription"];
+            $userid = $_POST["userid"];
+            $this->PhotoalbumDatabase->newAlbum($albumname, $albumdescription, $userid);
+        }
+
+
+        if ($_SESSION["login"]) {
+        $this->pageload("Photoalbum", "dsplPhotosForUsers", [ 
+            # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+            "allAlbums" => $allAlbums,
+            ]);
+        }   else {
+            header("Location: /Login"); 
+        }
+    }
+
+
+    public function albumByUserid(){
+
+        $allAlbum = $this->PhotoalbumDatabase->getAlbumByUserID($_SESSION["userid"]);
 
         if(!empty($_POST["newalbum"])) {
             $albumname = $_POST["albumname"];
@@ -31,7 +54,6 @@ class PhotoalbumController extends AbstractController {
         }   else {
             header("Location: /Login"); 
         }
-
     }
 
     public function ajaxNewAlbumFunction(){
@@ -45,7 +67,7 @@ class PhotoalbumController extends AbstractController {
 
     public function ajaxPagePhotoAlbum(){
 
-        $allAlbum = $this->PhotoalbumDatabase->getAllAlbum($_SESSION["userid"]);
+        $allAlbum = $this->PhotoalbumDatabase->getAlbumByUserID($_SESSION["userid"]);
         /** Es soll nur der Bereich der Album Seite geladen werden 
          * und nicht die ganze Seite! */
         $this->pageload("Photoalbum", "ajaxPagePhotoAlbum", [

@@ -14,7 +14,7 @@
 <!-- TODO: separate update password and email form the rest of the information -->
   <div  class="container col col-6">
   <?php //echo var_dump($_POST) ?>
-  <p  style="color: RED"><?php echo $UpdateSuccess ?></p>
+  <p  style="color: RED"><?php echo $updateSuccess ?></p>
     <form id="registerform" method="POST" >
         <div class="row">
             <div class="mb-3 col col-6">

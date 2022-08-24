@@ -61,7 +61,7 @@ class UserController extends AbstractController {
 
     public function updateUserProfile() {
         $pwdFail = null;
-        $UpdateSuccess = null;
+        $updateSuccess = null;
         $emailFail = null;
 
     $userid = $_GET["userid"];
@@ -94,15 +94,12 @@ class UserController extends AbstractController {
         else {
             // $user = $this->userDatabase->getUserByEmail($email);
             // if (empty($user)){
-
+                
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
                 #speichert den user ein
                 $this->userDatabase->updateUser($firstname,$lastname,$username,$email,$password_hash, $bio,$userid);
-
-
-                
-                
-                header("Location: /Users/userprofile?userid=$userid>"); 
+                $updateSuccess = 'You did it ! - everything is up to date';
+                // header("Location: /Users/userprofile?userid=$userid>"); 
                 
         }
     }
@@ -112,7 +109,7 @@ class UserController extends AbstractController {
             # AUF DIE GENAUE SCHREIBWEISE ACHTEN
             "singleUser" => $singleUser,
             "pwdFail" => $pwdFail,
-            "UpdateSuccess" => $UpdateSuccess,
+            "updateSuccess" => $updateSuccess,
             "emailFail" => $emailFail,
 
             ]);

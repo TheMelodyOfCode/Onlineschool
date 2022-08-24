@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
+<?php require_once __DIR__ . "../../../../../mainsrc/Design/teacherheader.php"; ?>
 
 <br>
 <br>
@@ -18,7 +18,7 @@
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
-        
+
       <div class="col">
       <div class="card">
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/photo-64.png" class="card-img-top" alt="...">
@@ -31,16 +31,6 @@
             </div>
         </div>
 
-      <div class="col">
-            <div class="card">
-                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Your Documents</h5>
-                        <p class="card-text">Here is some space for your Documents</p>
-                        <a href="/Documents" class="btn btn-success">Go to documents</a>
-                    </div>
-            </div>
-        </div>
 
         
 
@@ -53,6 +43,29 @@
                     <p class="card-text"> Information about all students</p>
                     <a href="/Users" class="btn btn-success">See who's there</a>
                 </div>
+            </div>
+        </div>
+
+        <div class="col">
+
+        <div class="card">
+        <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/photo2-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gallery </h5>
+                    <p class="card-text"> here you can edit and upload Photos for the gallery</p>
+                    <a href="/Photoalbum" class="btn btn-success">Add some Photos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                    <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/settings.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Documents</h5>
+                        <p class="card-text">Here is some space for your Documents</p>
+                        <a href="/Documents" class="btn btn-success">Go to documents</a>
+                    </div>
             </div>
         </div>
 

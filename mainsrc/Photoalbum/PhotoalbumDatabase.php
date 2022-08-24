@@ -19,7 +19,20 @@ class PhotoalbumDatabase extends AbstractDatabase {
     }
 
 
-function getAllAlbum($userid){ 
+function getAllAlbums(){ 
+        $table = $this->getTable();
+        $model = $this->getModel();
+    
+        if (!empty($this->pdo)){
+            $allAlbums = $this->pdo->prepare("SELECT * FROM $table");
+            $allAlbums->execute();
+            $allAlbums->setFetchMode(PDO::FETCH_CLASS, $model);
+            $albumDATA = $allAlbums->fetchAll(PDO::FETCH_CLASS);
+            }
+            return $albumDATA;
+    }
+
+function getAlbumByUserID($userid){ 
         $table = $this->getTable();
         $model = $this->getModel();
     
