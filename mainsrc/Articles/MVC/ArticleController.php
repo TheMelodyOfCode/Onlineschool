@@ -11,6 +11,59 @@ class ArticleController extends AbstractController{
         $this->articleDatabase = $articleDatabase;
     }
 
+
+
+    function checkMembership(){
+
+  
+        if ($_SESSION["membership"] === "pro" OR $_SESSION["membership"] === "teacher") {
+
+            $proGreeting = $this->articleDatabase->getSingleArticle(5);
+            $proSection1 = $this->articleDatabase->getSingleArticle(6);
+            $proSection2 = $this->articleDatabase->getSingleArticle(7);
+            $proSection3 = $this->articleDatabase->getSingleArticle(8);
+
+            if ($_SESSION["login"]) {
+                $this->pageload("Articles", "learningAreaPro", [
+                    "proGreeting" => $proGreeting,
+                    "proSection1" => $proSection1,
+                    "proSection2" => $proSection2,
+                    "proSection3" => $proSection3,
+                    ]);    
+            }   else {
+                header("Location: /Login"); 
+            }
+
+        }
+        if ($_SESSION["membership"] === "enterprise") {
+
+            $enterprGreeting = $this->articleDatabase->getSingleArticle(9);
+            $enterprSection1 = $this->articleDatabase->getSingleArticle(10);
+            $enterprSection2 = $this->articleDatabase->getSingleArticle(11);
+            $enterprSection3 = $this->articleDatabase->getSingleArticle(12);
+
+            if ($_SESSION["login"]) {
+                $this->pageload("Articles", "enterprisearea", [
+                    "enterprGreeting" => $enterprGreeting,
+                    "enterprSection1" => $enterprSection1,
+                    "enterprSection2" => $enterprSection2,
+                    "enterprSection3" => $enterprSection3,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+            }
+
+
+
+        } else {
+            $greeting = $this->articleDatabase->getSingleArticle(4);
+            $this->pageload("Articles", "freeLearning", [
+                "greeting" => $greeting,
+                ]);
+        }
+        
+    }
+
     public function home(){
 
         $aboutHeather = $this->articleDatabase->getSingleArticle(1);

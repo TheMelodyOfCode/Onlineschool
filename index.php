@@ -57,7 +57,7 @@ require_once "init.php";
         $router->add("userController", "updateUserProfile");
     } 
     elseif ($request == "/LearningArea") {
-        $router->add("dashboardController", "checkMembership");
+        $router->add("articleController", "checkMembership");
     } 
     #-----------------------------------------------------
     #Teachers

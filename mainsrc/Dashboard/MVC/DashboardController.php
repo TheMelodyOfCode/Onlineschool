@@ -52,40 +52,7 @@ class DashboardController extends AbstractController {
            
     }
 
-    function checkMembership(){
-        $userid = $_SESSION["userid"];
-        $singleUser = $this->userDatabase->getSingleUser($userid);
-        
-        if ($_SESSION["membership"] === "pro" OR $_SESSION["membership"] === "teacher") {
 
-            if ($_SESSION["login"]) {
-                $this->pageload("Articles", "learningAreaPro", [
-                    "singleUser" => $singleUser,
-                    ]);    
-            }   else {
-                header("Location: /Login"); 
-            }
-
-        }
-        if ($_SESSION["membership"] === "enterprise") {
-
-            if ($_SESSION["login"]) {
-                $this->pageload("Articles", "enterpriseLearning", [
-                    "singleUser" => $singleUser,
-                    ]);
-            }   else {
-                header("Location: /Login"); 
-            }
-
-
-
-        } else {
-            $this->pageload("Articles", "freeLearning", [
-                "singleUser" => $singleUser,
-                ]);
-        }
-        
-    }
 
     public function teacherProfile() {    
 
