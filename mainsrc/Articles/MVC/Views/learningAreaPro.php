@@ -63,8 +63,9 @@
 <section class=" mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-5 col-md-8 mx-auto">
-        <h1 class="fw-light">Learning Area Pro</h1>
-        <p class="lead text-muted"> Welcome <?php echo $singleUser->username ?> ! Let's get to it, shall we ?</p>
+
+        <?php echo $proGreeting->textcontent ?>
+
       </div>
     </div>
   </section>
@@ -72,6 +73,7 @@
   <div class="b-example-divider"></div>
 
 <div class="container px-4 py-5" id="hanging-icons">
+
   <h2 class="pb-2 border-bottom">Pro Section </h2>
   <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
     <div class="col d-flex align-items-start">
@@ -79,8 +81,9 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
       </div>
       <div>
-        <h2>Learning Pro Section title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <?php echo $proSection1->textcontent ?>
+        <!-- <h2>Learning Pro Section title 1</h2>
+        <p>Mr. Poopybutthole (voiced by Justin Roiland) – A yellow humanoid creature and longtime family friend. He is a parody of wacky side characters on television shows. Although he shows up at the same time as a group of Alien Parasites who take the forms of similarly zany characters, Mr. Poopybutthole himself is real.</p> -->
         <a href="#" class="btn btn-primary">
           Primary button
         </a>
@@ -91,8 +94,9 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
       </div>
       <div>
-        <h2>Learning Pro Section title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <?php echo $proSection2->textcontent ?>
+        <!-- <h2>Learning Pro Section title 2</h2>
+        <p>Arthricia (voiced by Chelsea Kane) – A young alien girl who resembles an anthropomorphic cat person. She resides on a planet with an Amish style culture whose residents engage in an annual "purge". She first injures Rick, mugs Morty, and steals their ship in order to use it to kill the rich people who dominate her planet and enforce the purge amongst the poor.</p> -->
         <a href="#" class="btn btn-primary">
           Primary button
         </a>
@@ -103,8 +107,9 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
       </div>
       <div>
-        <h2>Learning Pro Section title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <?php echo $proSection3->textcontent ?>
+        <!-- <h2>Learning Pro Section title 3</h2>
+        <p>Mr. Nimbus (voiced by Dan Harmon) – The King of the Ocean, ruler of Atlantis and Rick's arch-nemesis. Nimbus has a treaty with Rick for him to never touch the ocean, the breaking of which causes conflict between them. He also has hydrokinetic abilities and the power to control the police at a command.</p> -->
         <a href="#" class="btn btn-primary">
           Primary button
         </a>

@@ -25,7 +25,6 @@ class ArticleController extends AbstractController{
     }
 
     public function freeLearning(){
-
         $greeting = $this->articleDatabase->getSingleArticle(4);
 
     if ($_SESSION["login"]) {
@@ -37,32 +36,73 @@ class ArticleController extends AbstractController{
             }
     }
 
+    public function proLearning(){
+
+        $proGreeting = $this->articleDatabase->getSingleArticle(5);
+        $proSection1 = $this->articleDatabase->getSingleArticle(6);
+        $proSection2 = $this->articleDatabase->getSingleArticle(7);
+        $proSection3 = $this->articleDatabase->getSingleArticle(8);
+  
+
+    if ($_SESSION["login"]) {
+        $this->pageload("Articles", "learningAreaPro", [
+            "proGreeting" => $proGreeting,
+            "proSection1" => $proSection1,
+            "proSection2" => $proSection2,
+            "proSection3" => $proSection3,
+        ]);
+    }  else {
+        header("Location: /Login"); 
+            }
+    }
+
+
 
     public function updateFreelearning(){
 
-        $updateSuccess = null;
         $greeting = $this->articleDatabase->getSingleArticle(4);     
 
-        if (!empty($_POST)){
-            
+        if (!empty($_POST)){  
             $welcomeTxt = $_POST["welcomeTxt"];
             $textid = 4;
                 $this->articleDatabase->updateTextcontent($textid, $welcomeTxt);
-                $updateSuccess = 'You did it ! - everything is up to date';
                 header("Location: /Freelearning"); 
+        }
+        if ($_SESSION["login"]) {
+            $this->pageload("Articles", "updatefreearea", [ 
+                "greeting" => $greeting,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+        }
+
     }
 
-    if ($_SESSION["login"]) {
-        $this->pageload("Articles", "updatefreearea", [ 
-            "greeting" => $greeting,
-            "updateSuccess" => $updateSuccess,
+    public function updateProlearning(){
 
-            ]);
-    }   else {
-        header("Location: /Login"); 
-    }
+        $proGreeting = $this->articleDatabase->getSingleArticle(5);
+        $proSection1 = $this->articleDatabase->getSingleArticle(6);
+        $proSection2 = $this->articleDatabase->getSingleArticle(7);
+        $proSection3 = $this->articleDatabase->getSingleArticle(8);    
 
+        if (!empty($_POST)){  
 
+            $textcontent = $_POST["proSection"];
+            $textid = $_POST["textid"];
+ 
+                $this->articleDatabase->updateTextcontent($textid, $textcontent);
+                header("Location: /Prolearning"); 
+        }
+        if ($_SESSION["login"]) {
+            $this->pageload("Articles", "updateproarea", [ 
+                "proGreeting" => $proGreeting,
+                "proSection1" => $proSection1,
+                "proSection2" => $proSection2,
+                "proSection3" => $proSection3,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+        }
 
     }
 

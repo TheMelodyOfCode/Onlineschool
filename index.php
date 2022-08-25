@@ -66,27 +66,20 @@ require_once "init.php";
     } 
 
     #-----------------------------------------------------
-    # Update Articles for teachers
+    # Articles and Update Articles for teachers
     elseif ($request == "/Freelearning") {
         $router->add("articleController", "freeLearning");
     } 
+    elseif ($request == "/Prolearning") {
+        $router->add("articleController", "proLearning");
+    } 
+
     elseif ($request == "/UpdateFreelearning") {
         $router->add("articleController", "updateFreelearning");
     } 
-
-
-
-
-    # Articles AJAX
-    /** Diese Route wird im Browser NICHT geladen! Diese Route ist nur für AJAX!
-     * AJAX greift auf die Route zu und führt dann den Code aus. */
-
-    // elseif ($request == "/Greeting-Update"){
-    //     # erst die Funktion
-    //     $router->add("articleController", "ajaxUpdateFreelearning");
-    //     # dann der View
-    //     // $router->add("documentController", "ajaxDisplaySingleDocumentSettingsPage");
-    // }
+    elseif ($request == "/UpdateProlearning") {
+        $router->add("articleController", "updateProlearning");
+    } 
 
 
 
