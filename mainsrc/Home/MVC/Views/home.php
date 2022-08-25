@@ -59,15 +59,45 @@
 
   <!-- Text - ABOUT HEATHER -->
   <a name="tutor"></a>
-  <?php  echo $aboutHeather->textcontent; ?>
+  <div id="heather" class="row flex-lg-row-reverse align-items-center  py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+
+    <?php  echo $aboutHeather->textcontent; ?>
+
+    </div>
+  </div>
+ 
 
   <!-- Text - ONLINESCHOOL -->
   <a name="onlineSchool"></a>
-  <?php  echo $onlineschool->textcontent; ?>
+
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-lg-6">
+          
+          <?php  echo $onlineschool->textcontent; ?>
+    </div>
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="/onlineschool/mainsrc/src/img/onlineSchool.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+
 
   <!-- Text - COURSES -->
   <a name="courses"></a>
-  <?php  echo $courses->textcontent; ?>
+
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="/onlineschool/mainsrc/src/img/courses.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+
+    <?php  echo $courses->textcontent; ?>
+
+
+    </div>
+  </div>
+
+
 
 
 </div><!-- Hero end -->
