@@ -73,12 +73,18 @@ require_once "init.php";
     elseif ($request == "/Prolearning") {
         $router->add("articleController", "proLearning");
     } 
+    elseif ($request == "/Enterprise") {
+        $router->add("articleController", "enterpriseLearning");
+    } 
 
     elseif ($request == "/UpdateFreelearning") {
         $router->add("articleController", "updateFreelearning");
     } 
     elseif ($request == "/UpdateProlearning") {
         $router->add("articleController", "updateProlearning");
+    } 
+    elseif ($request == "/UpdateEnterprise") {
+        $router->add("articleController", "updateEnterprise");
     } 
 
 

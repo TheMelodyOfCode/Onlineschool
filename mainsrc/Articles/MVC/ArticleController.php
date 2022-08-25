@@ -55,6 +55,26 @@ class ArticleController extends AbstractController{
         header("Location: /Login"); 
             }
     }
+    public function enterpriseLearning(){
+
+        $enterprGreeting = $this->articleDatabase->getSingleArticle(9);
+        $enterprSection1 = $this->articleDatabase->getSingleArticle(10);
+        $enterprSection2 = $this->articleDatabase->getSingleArticle(11);
+        $enterprSection3 = $this->articleDatabase->getSingleArticle(12);
+  
+
+    if ($_SESSION["login"]) {
+        $this->pageload("Articles", "enterprisearea", [
+            "enterprGreeting" => $enterprGreeting,
+            "enterprSection1" => $enterprSection1,
+            "enterprSection2" => $enterprSection2,
+            "enterprSection3" => $enterprSection3,
+        ]);
+    }  else {
+        header("Location: /Login"); 
+            }
+    }
+
 
 
 
@@ -99,6 +119,35 @@ class ArticleController extends AbstractController{
                 "proSection1" => $proSection1,
                 "proSection2" => $proSection2,
                 "proSection3" => $proSection3,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+        }
+
+    }
+
+
+    public function updateEnterprise(){
+
+        $enterprGreeting = $this->articleDatabase->getSingleArticle(9);
+        $enterprSection1 = $this->articleDatabase->getSingleArticle(10);
+        $enterprSection2 = $this->articleDatabase->getSingleArticle(11);
+        $enterprSection3 = $this->articleDatabase->getSingleArticle(12);
+
+        if (!empty($_POST)){  
+
+            $textcontent = $_POST["proSection"];
+            $textid = $_POST["textid"];
+ 
+                $this->articleDatabase->updateTextcontent($textid, $textcontent);
+                header("Location: /Enterprise"); 
+        }
+        if ($_SESSION["login"]) {
+            $this->pageload("Articles", "updateenterprisearea", [ 
+                "enterprGreeting" => $enterprGreeting,
+                "enterprSection1" => $enterprSection1,
+                "enterprSection2" => $enterprSection2,
+                "enterprSection3" => $enterprSection3,
                     ]);
             }   else {
                 header("Location: /Login"); 

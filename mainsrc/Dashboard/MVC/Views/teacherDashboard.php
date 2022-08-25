@@ -76,7 +76,7 @@
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/user-96.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Update your Profile</h5>
-                    <p class="card-text">Here you can make changes to your Name, Email and Password</p>
+                    <p class="card-text">make changes to your Name, Email and Password</p>
                     <a href="/Users/userprofile?userid=<?php echo $_SESSION["userid"] ?>" class="btn btn-success">Go to your Profil</a>
                 </div>
             </div>
@@ -85,10 +85,10 @@
 
         <div class="col">
         <div class="card">
-                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/learning3-64.png" class="card-img-top" alt="...">
+                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/learning-64.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Update Free Learning Area</h5>
-                    <p class="card-text">Here you can make changes to the content of the free learning area</p>
+                    <p class="card-text">make changes to the content of the free learning area</p>
                     <a href="/UpdateFreelearning" class="btn btn-success">Free Learning Area</a>
                 </div>
             </div>
@@ -99,8 +99,19 @@
                 <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/learning2-64.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Update Pro Learning Area</h5>
-                    <p class="card-text">Here you can make changes to the content of the Pro learning area</p>
+                    <p class="card-text">make changes to the content of the Pro learning area</p>
                     <a href="/UpdateProlearning" class="btn btn-success">Pro Learning Area</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+        <div class="card">
+                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/learning3-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Update Enterprise Learning Area</h5>
+                    <p class="card-text">Here you can make changes to the content of the Enterprise learning area</p>
+                    <a href="/UpdateEnterprise" class="btn btn-success">Enterprise Learning Area</a>
                 </div>
             </div>
         </div>

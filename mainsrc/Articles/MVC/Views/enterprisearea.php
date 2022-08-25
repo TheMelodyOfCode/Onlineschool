@@ -64,20 +64,9 @@
     <div class="row py-lg-5">
       <div class="col-lg-5 col-md-8 mx-auto">
 
+        <?php echo $enterprGreeting->textcontent ?>
 
-      <form  method="POST" >
-            <div class="mb-3">
-            <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprGreeting->textcontent ?>
-                </textarea>
-                <input type="hidden" name="textid" value="9">
-            </div>
-            <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
-      </form>
-
-
-      </div> 
+      </div>
     </div>
   </section>
 
@@ -91,17 +80,12 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
       </div>
       <div>
-
-      <form  method="POST" >
-            <div class="mb-3">
-            <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection1->textcontent ?>
-                </textarea>
-                <input type="hidden" name="textid" value="10">
-            </div>
-            <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
-      </form>
+      <?php echo $enterprSection1->textcontent ?>
+        <!-- <h2>Enterprise Section title 1</h2>
+        <p>Noob Noob (voiced by Justin Roiland) – The Vindicators' intern and janitor, who appears to be of the same species as Mr. Poopybutthole except with asymmetrical eyes. He wishes to eventually become a full-fledged Vindicator, but is always made to stay behind and clean up their ship.</p> -->
+        <a href="#" class="btn btn-primary">
+          Primary button
+        </a>
 
       </div>
     </div>
@@ -110,20 +94,12 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
       </div>
       <div>
-
-
-      <form  method="POST" >
-            <div class="mb-3">
-            <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection2->textcontent ?>
-                </textarea>
-                <input type="hidden" name="textid" value="11">
-            </div>
-            <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
-      </form>
-
-
+      <?php echo $enterprSection2->textcontent ?>
+        <!-- <h2>Enterprise Section title 2</h2>
+        <p>The Ferret Pilots – A group of teenagers animated in anime style who were the original pilots of the Gotron ferrets, large ferret-like vehicles. They kidnap Morty and initially try to bribe him with Boob World currency in exchange for insider information about Rick's operation, but when he resists, he is forced to fight off an assassination attempt.</p> -->
+        <a href="#" class="btn btn-primary">
+          Primary button
+        </a>
       </div>
     </div>
     <div class="col d-flex align-items-start">
@@ -131,18 +107,12 @@
         <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
       </div>
       <div>
-
-      <form  method="POST" >
-            <div class="mb-3">
-            <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection3->textcontent ?>
-                </textarea>
-                <input type="hidden" name="textid" value="12">
-            </div>
-            <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
-      </form>
-
+      <?php echo $enterprSection3->textcontent ?>
+        <!-- <h2>Enterprise Section title 3</h2>
+        <p>Kendra (voiced by Lauren Tom) – A red-haired anime-like character who is the leader of the pilots from the five realities. She was hired by Rick, who did not know her real identity, to take control of the GoGotron. She later betrays and captures him in the GoGotron.</p> -->
+        <a href="#" class="btn btn-primary">
+          Primary button
+        </a>
       </div>
     </div>
   </div>
