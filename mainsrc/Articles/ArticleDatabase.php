@@ -35,5 +35,35 @@ class ArticleDatabase extends AbstractDatabase{
     return $singleDATA;
 }
 
+function updateArticle($textid,$textname,$textcontent,$page,){ 
+    $table = $this->getTable();
+    if (!empty($this->pdo)){
+
+       $statement = $this->pdo->prepare("UPDATE $table SET textid = :textid, textname = :textname, textcontent = :textcontent, page = :page ");
+       $statement->execute([
+            'textid' => $textid,
+            'textname' => $textname,
+            'textcontent' => $textcontent,
+            'page' => $page,
+            
+       ]);
+       #Hier wird kein return benötigt, weil nichts ausgegeben werden muss
+    }
+}
+
+function updateTextcontent($textid, $textcontent){ 
+    $table = $this->getTable();
+    if (!empty($this->pdo)){
+                                        
+       $statement = $this->pdo->prepare("UPDATE $table SET  textcontent = :textcontent WHERE `textid` = :textid " );
+       $statement->execute([
+            'textid' => $textid,
+            'textcontent' => $textcontent,
+       ]);
+    }
+}
+
+
+
 
 }

@@ -60,15 +60,45 @@
 </svg>
 
 <br>
-<section class=" mt-5 text-center container">
+<section id="reloadFree" class=" mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-5 col-md-8 mx-auto">
-        <h1 class="fw-light">Free Learning Area </h1>
-        <p class="lead text-muted"> Welcome <?php echo $singleUser->username ?> ! Let's get to it, shall we ?</p>
+
+
+
+
+      <?php   //echo var_dump($_POST) ?>
+          <form id="freelearning" method="POST" >
+            <div class="mb-3">
+                <textarea class="form-control" type="text"  name="welcomeTxt" id="welcomeTxt" cols="50" rows="1">
+                <?php echo $greeting->textcontent ?> 
+                </textarea>
+                <div id="welcomeTxtHelp" class="form-text">Change the greeting if you like</div>
+            </div>
+            <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
+          </form>
+
+
+    <!-- <div style="text-align: left;" class="container"> -->
+    <!-- Um einen Button oder a link anstelle einer Form zu benutzen  könne wir mit
+         Daten Attributen arbeiten. Wichtig ist das die datenAttribute genauso benannt werden 
+        wie in der PHP Funktion -->
+        <!-- <button class="btn btn-success newAlbumAjaxButton"
+        data-albumname = "New Album" 
+        data-albumdescription = "Ich bin ein neues Album" 
+        data-userid="<?php //  echo $_SESSION["userid"] ?>" >New Album</button>
+   </div> -->
+
+
+
+
+
+
+
       </div>
     </div>
   </section>
-
+ 
   <div class="b-example-divider"></div>
 
 
@@ -151,6 +181,7 @@
 
  
 
-
+<!-- <script src="onlineschool/mainsrc/src/Jquery/jquery-3.6.0.js"></script>
+<script src="onlineschool/mainsrc/Articles/MVC/AjaxArticle/AjaxFreeUpdate.js"></script> -->
 
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>

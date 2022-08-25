@@ -24,6 +24,50 @@ class ArticleController extends AbstractController{
        ]);
     }
 
+    public function freeLearning(){
+
+        $greeting = $this->articleDatabase->getSingleArticle(4);
+
+    if ($_SESSION["login"]) {
+        $this->pageload("Articles", "freelearning", [
+            "greeting" => $greeting,
+        ]);
+    }  else {
+        header("Location: /Login"); 
+            }
+    }
+
+
+    public function updateFreelearning(){
+
+        $updateSuccess = null;
+        $greeting = $this->articleDatabase->getSingleArticle(4);     
+
+        if (!empty($_POST)){
+            
+            $welcomeTxt = $_POST["welcomeTxt"];
+            $textid = 4;
+                $this->articleDatabase->updateTextcontent($textid, $welcomeTxt);
+                $updateSuccess = 'You did it ! - everything is up to date';
+                header("Location: /Freelearning"); 
+    }
+
+    if ($_SESSION["login"]) {
+        $this->pageload("Articles", "updatefreearea", [ 
+            "greeting" => $greeting,
+            "updateSuccess" => $updateSuccess,
+
+            ]);
+    }   else {
+        header("Location: /Login"); 
+    }
+
+
+
+    }
+
+
+
 
 
 

@@ -63,8 +63,7 @@
 <section class=" mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-5 col-md-8 mx-auto">
-        <h1 class="fw-light">Free Learning Area </h1>
-        <p class="lead text-muted"> Welcome <?php echo $singleUser->username ?> ! Let's get to it, shall we ?</p>
+      <?php echo $greeting->textcontent ?> 
       </div>
     </div>
   </section>

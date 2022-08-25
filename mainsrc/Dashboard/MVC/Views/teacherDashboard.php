@@ -84,6 +84,18 @@
 
         </div>
 
+        <div class="col">
+
+        <div class="card">
+                <img style="width: 100px; margin: auto; padding: 10px" src="../../../../../onlineschool/mainsrc/Dashboard/MVC/Views/Medien/learning3-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Update Free Learning Area</h5>
+                    <p class="card-text">Here you can make changes to the content of the free learning area</p>
+                    <a href="/UpdateFreelearning" class="btn btn-success">Free Learning Area</a>
+                </div>
+            </div>
+        </div>
+
   
     </div>
   </div>

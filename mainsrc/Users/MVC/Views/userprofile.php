@@ -60,7 +60,7 @@
 
         <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
         
-    </form>
+
 </div>
 <br>
 <br>
