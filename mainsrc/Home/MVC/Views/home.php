@@ -36,7 +36,7 @@
         <div class="carousel-caption text-end">
           <!-- <h1>One more for good measure.</h1>
           <p>Some representative placeholder content for the third slide of this carousel.</p> -->
-          <p><a  class="btn btn-lg btn-dark btn-outline-warning" href="#">Browse gallery</a></p>
+          <p><a  class="btn btn-lg btn-dark btn-outline-warning" href="/Gallery">Browse gallery</a></p>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
 
   <!-- Three columns of text below the carousel -->
   <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Courses or whatever</h2>
+    <h2 class="pb-2 border-bottom">Courses</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 
       <div class="feature col">
@@ -92,7 +92,7 @@
           </svg>
         </div>
 
-        <h2>Course title 1</h2>
+        <h2>Writing</h2>
         <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
         <a href="#" class="icon-link">
           Call to action
@@ -107,7 +107,7 @@
           <svg class="bi" width="1em" height="1em"><use xlink:href="#calender-heart"/></svg>
         </div>
 
-        <h2>Course title 2</h2>
+        <h2>Reading</h2>
         <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
         <a href="#" class="icon-link">
           Call to action
@@ -121,7 +121,7 @@
           <svg class="bi" width="1em" height="1em"><use xlink:href="#cirlcle-fill"/></svg>
         </div>
 
-        <h2>Course title 3</h2>
+        <h2>Speaking</h2>
         <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
         <a href="#" class="icon-link">
           Call to action
@@ -136,13 +136,13 @@
 
 
   <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Custom cards</h2>
+    <h2 class="pb-2 border-bottom">English for everyone</h2>
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/onlineschool/mainsrc/src/img/edinburg1.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">English for travelling</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -163,7 +163,7 @@
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/onlineschool/mainsrc/src/img/educationHK3.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Large English librarys in the learning Areas</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -185,7 +185,7 @@
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/onlineschool/mainsrc/src/img/edinburg3.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">English History</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -221,10 +221,9 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>10 users included</li>
-            <li>2 GB of storage</li>
-            <li>Email support</li>
-            <li>Help center access</li>
+            <li>Basic English grammar</li>
+            <li>Common English phrases</li>
+            <li>Access to the free learning Area</li>
           </ul>
 
           <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
@@ -239,10 +238,9 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>20 users included</li>
-            <li>10 GB of storage</li>
-            <li>Priority email support</li>
-            <li>Help center access</li>
+            <li>Medium & Pro English</li>
+            <li>B2 to A1 Courses</li>
+            <li>Access to the Pro learning Area</li>
           </ul>
           <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
         </div>
@@ -256,10 +254,9 @@
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>30 users included</li>
-            <li>15 GB of storage</li>
-            <li>Phone and email support</li>
-            <li>Help center access</li>
+            <li>Pro & Buisiness English</li>
+            <li>A1-A3 - The sky is the limit</li>
+            <li>Access to the Enterprise learning Area</li>
           </ul>
           <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
         </div>
@@ -281,14 +278,14 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row" class="text-start">Public</th>
+          <th scope="row" class="text-start">Basic English grammar</th>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         </tr>
         <tr>
-          <th scope="row" class="text-start">Private</th>
-          <td></td>
+          <th scope="row" class="text-start">Access to the free learning Area</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         </tr>
@@ -296,25 +293,25 @@
 
       <tbody>
         <tr>
-          <th scope="row" class="text-start">Permissions</th>
-          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        </tr>
-        <tr>
-          <th scope="row" class="text-start">Sharing</th>
+          <th scope="row" class="text-start">B2 to A1 Courses</th>
           <td></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         </tr>
         <tr>
-          <th scope="row" class="text-start">Unlimited members</th>
+          <th scope="row" class="text-start">Medium & Pro English</th>
           <td></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         </tr>
         <tr>
-          <th scope="row" class="text-start">Extra security</th>
+          <th scope="row" class="text-start">A1-A3 - The sky is the limit</th>
+          <td></td>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Access to the Enterprise learning Area</th>
           <td></td>
           <td></td>
           <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>

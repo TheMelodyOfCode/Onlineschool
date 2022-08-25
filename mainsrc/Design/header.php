@@ -128,11 +128,10 @@
                   <img src="/onlineschool/mainsrc/src/img/fav/watchout2.png" alt="mdo" width="64" height="64" class="rounded-circle">
 
                 </a>
-                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                      <li><a class="dropdown-item" href="/Login">Settings</a></li>
-                      <li><a class="dropdown-item" href="/Login">Profile</a></li>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">       
+                    <li><a href="/Register" class="dropdown-item"> <i class="fa-solid fa-registered"></i> Sign-Up</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/Dashboard">Login</a></li>
+                      <li><a class="dropdown-item" href="/Dashboard"> <i class="fa-solid fa-school"></i> Login</a></li>
                     </ul>
                 </div>
                 <!-- <div class="text-end">
