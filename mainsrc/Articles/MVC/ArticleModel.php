@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Home\MVC;
+namespace App\Articles\MVC;
 
 use App\App\AbstractMVC\AbstractModel;
 
-class IndexModel extends AbstractModel {
+class ArticleModel extends AbstractModel {
    
     public $textid;
     public $textname;
     public $textcontent;
+    public $page;
 
 }

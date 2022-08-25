@@ -59,7 +59,7 @@ class DashboardController extends AbstractController {
         if ($_SESSION["membership"] === "pro" OR $_SESSION["membership"] === "teacher") {
 
             if ($_SESSION["login"]) {
-                $this->pageload("Dashboard", "learningAreaPro", [
+                $this->pageload("Articles", "learningAreaPro", [
                     "singleUser" => $singleUser,
                     ]);    
             }   else {
@@ -70,7 +70,7 @@ class DashboardController extends AbstractController {
         if ($_SESSION["membership"] === "enterprise") {
 
             if ($_SESSION["login"]) {
-                $this->pageload("Dashboard", "enterpriseLearning", [
+                $this->pageload("Articles", "enterpriseLearning", [
                     "singleUser" => $singleUser,
                     ]);
             }   else {
@@ -80,7 +80,7 @@ class DashboardController extends AbstractController {
 
 
         } else {
-            $this->pageload("Dashboard", "freeLearning", [
+            $this->pageload("Articles", "freeLearning", [
                 "singleUser" => $singleUser,
                 ]);
         }

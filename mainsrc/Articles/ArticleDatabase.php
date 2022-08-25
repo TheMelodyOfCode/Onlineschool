@@ -1,12 +1,12 @@
 <?php
-namespace App\Home;
+namespace App\Articles;
 
 use App\App\AbstractMVC\AbstractDatabase;
-use App\Home\MVC\IndexModel;
+use App\Articles\MVC\ArticleModel;
 use PDO;
 
 
-class IndexDatabase extends AbstractDatabase{
+class ArticleDatabase extends AbstractDatabase{
 
     function getTable()
     {
@@ -15,7 +15,7 @@ class IndexDatabase extends AbstractDatabase{
 
     function getModel()
     {
-        return IndexModel::class;
+        return ArticleModel::class;
     }
     
     function getSingleArticle($textID){ 

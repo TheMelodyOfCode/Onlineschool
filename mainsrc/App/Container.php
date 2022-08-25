@@ -2,8 +2,8 @@
 namespace App\App;
 
 
-use App\Home\MVC\IndexController;
-use App\Home\IndexDatabase;
+use App\Articles\MVC\ArticleController;
+use App\Articles\ArticleDatabase;
 use App\Error\MVC\ErrorController;
 use App\Connections\ConToMySQL;
 use App\Users\MVC\UserController;
@@ -102,11 +102,11 @@ class Container {
             'errorController' => function(){
                 return new ErrorController();
             },
-            'indexController' => function(){
-                return new IndexController($this->build('indexDatabase'));
+            'articleController' => function(){
+                return new ArticleController($this->build('articleDatabase'));
             },
-            'indexDatabase' => function(){
-                return new IndexDatabase($this->build('pdo'));
+            'articleDatabase' => function(){
+                return new ArticleDatabase($this->build('pdo'));
             },
             /** weil wir im constructor des Routers den Container angeben
              *  muss hier der Container auch übergeben werden um zugriff zu haben */

@@ -15,7 +15,7 @@ require_once "init.php";
     $router = $container->build("router");
 
     /** Path_info erhalten wir immer dann wenn wir keinen
-     *  Parameter übergeben haben , so wie bei der Startseite
+     *  Parameter übergeben haben , so wie bei der Startseite.
      *  wenn also path_info gesetzt ist speichern wir dies und 
      *  ansonsten wenn wenn request_uri gestzt ist wird das gespeichert*/
     if (isset($_SERVER["PATH_INFO"])) {
@@ -26,7 +26,7 @@ require_once "init.php";
 
 
     if ($request == "/onlineschool/"){
-        $router->add("indexController", "home");
+        $router->add("articleController", "home");
     }
     
     /** Hier wird immer der Controller übergeben und die enthaltene Funktion 
