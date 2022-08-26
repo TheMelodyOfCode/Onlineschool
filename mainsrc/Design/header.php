@@ -4,8 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO: add SEO tags -->
-    <title>Heathers' English Club</title>
+    <meta name="title" content="Englisch mit Heather">
+    <meta name="description" content="Englisch mit Heather. Online lernen mit einermuttersprachlichen Lehrerin.Join learners  whatever your age, ability or ambition. Discover English learning online.">
+    <meta name="keywords" content="Englisch, lernen, muttersprachlich, Lehrern, Live-Unterricht, qualifiziert,english ,online school, learning remote , fun , grammar, writing speaking, basics, professional , enterprise, holiday, ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="Max Mustermann">
+    <title>Englisch mit Heather</title>
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/onlineschool/mainsrc/src/img/fav/favicon.ico">
     <!-- Stylesheet -->
@@ -101,7 +108,7 @@
               </button>
         
               <a  href="/onlineschool/" class=" nav-link mr-1 text-warning">
-                <h3  id="headline" >Heathers School from Scotland </h3> 
+                <h3  id="headline" >Englisch mit Heather</h3> 
               </a> 
 
               <div class="collapse navbar-collapse" id="navbarsExample07">
