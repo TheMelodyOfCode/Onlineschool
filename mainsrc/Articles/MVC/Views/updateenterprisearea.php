@@ -68,9 +68,7 @@
       <form  method="POST" >
             <div class="mb-3">
             <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprGreeting->textcontent ?>
-                </textarea>
+                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="4"><?php echo $enterprGreeting->textcontent ?></textarea>
                 <input type="hidden" name="textid" value="9">
             </div>
             <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
@@ -95,9 +93,7 @@
       <form  method="POST" >
             <div class="mb-3">
             <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection1->textcontent ?>
-                </textarea>
+                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="10"><?php echo $enterprSection1->textcontent ?></textarea>
                 <input type="hidden" name="textid" value="10">
             </div>
             <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
@@ -115,9 +111,7 @@
       <form  method="POST" >
             <div class="mb-3">
             <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection2->textcontent ?>
-                </textarea>
+                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="10"><?php echo $enterprSection2->textcontent ?></textarea>
                 <input type="hidden" name="textid" value="11">
             </div>
             <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
@@ -135,9 +129,7 @@
       <form  method="POST" >
             <div class="mb-3">
             <div class="form-text text-primary"> Do some changes if you like</div>
-                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="1">
-                <?php echo $enterprSection3->textcontent ?>
-                </textarea>
+                <textarea class="form-control" type="text"  name="proSection"  cols="50" rows="10"><?php echo $enterprSection3->textcontent ?></textarea>
                 <input type="hidden" name="textid" value="12">
             </div>
             <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>

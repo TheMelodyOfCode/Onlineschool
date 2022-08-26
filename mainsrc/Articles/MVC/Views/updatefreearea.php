@@ -70,9 +70,7 @@
       <?php   //echo var_dump($_POST) ?>
           <form id="freelearning" method="POST" >
             <div class="mb-3">
-                <textarea class="form-control" type="text"  name="welcomeTxt" id="welcomeTxt" cols="50" rows="1">
-                <?php echo $greeting->textcontent ?> 
-                </textarea>
+                <textarea class="form-control" type="text"  name="welcomeTxt" id="welcomeTxt" cols="70" rows="4"><?php echo $greeting->textcontent ?></textarea>
                 <div id="welcomeTxtHelp" class="form-text">Change the greeting if you like</div>
             </div>
             <button  type="submit" class="btn btn-primary" name="submit" value="send" >Update</button>
