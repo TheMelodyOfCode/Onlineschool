@@ -50,6 +50,7 @@
 <script src="onlineschool/mainsrc/src/Jquery/jquery-3.6.0.js"></script>
 <script src="onlineschool/mainsrc/Documents/MVC/AjaxDocument/ajaxDocumentInfoSettings.js"></script>
 <script src="onlineschool/mainsrc/Documents/MVC/AjaxDocument/AjaxDeleteBUTTON.js"></script>
+
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 
 

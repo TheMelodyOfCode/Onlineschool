@@ -1,13 +1,11 @@
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/teacherheader.php"; ?>
-<?php // echo $album1->albumdescription; ?>
 
 
 <section class="mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <!-- TODO: add gallery to Teacher section user are not supposed to uplaod photos -->
       <h1 class="fw-light">Deine Alben <?php echo $_SESSION["username"] ?></h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. </p>
       </div>
     </div>
   </section>
@@ -18,12 +16,11 @@
          Daten Attributen arbeiten. Wichtig ist das die datenAttribute genauso benannt werden 
         wie in der PHP Funktion -->
         <!-- <button class="btn btn-success newAlbumAjaxButton" -->
-        
         <!-- data-albumname = "New Album" 
         data-albumdescription = "Ich bin ein neues Album" 
         data-userid="<?php  //echo $_SESSION["userid"] ?>" >New Album</button> -->
     <!-- </div> -->
-    <?php  //var_dump($_POST) ?>
+
     <div class="b-example-divider"></div>
     <div class="container ">
         
@@ -46,13 +43,8 @@
 <script src="onlineschool/mainsrc/src/Jquery/jquery-3.6.0.js"></script>
 <script src="onlineschool/mainsrc/Photoalbum/MVC/AjaxPhotoalbum/AjaxNewAlbum.js"></script>
 <script src="onlineschool/mainsrc/Photoalbum/MVC/AjaxPhotoalbum/AjaxNewAlbumBUTTON.js"></script>
-<!-- <script src="../../../../../mainsrc/Photoalbum/MVC/AjaxPhotoalbum/AjaxNewAlbum.js"></script> -->
-<!-- <script>
-      $('#newAlbumForm').on('submit', function (event){
-    event.preventDefault();
-    alert("super");
-})
-    </script> -->
+
+
     <div class="b-example-divider"></div>
 <?php  require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 

@@ -1,11 +1,10 @@
-<?php require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
-<?php // echo $album1->albumdescription; ?>
+<?php  require_once __DIR__ . "../../../../../mainsrc/Design/userheader.php"; ?>
+
 
 
 <section class="mt-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <!-- TODO: change session to variable with render -->
       <h1 class="fw-light">Your Documents <?php echo $_SESSION["username"] ?></h1>
         <p class="lead text-muted">Here you can create a new Dokument or update your document Title and description</p>
       </div>
@@ -24,8 +23,8 @@
    </div> -->
 
 
-  
-    <div class="container ">
+   <div class="b-example-divider"></div>
+    <div class="container my-5">
 
         <!-- Durch die Funktion .done in AjaxNewDocument wird dieser Bereich neu geladen 
             und nicht die ganze Seite des Browsers was zur Folge hatte das , das Submit event nicht da war
@@ -45,9 +44,9 @@
 
 <script src="onlineschool/mainsrc/src/Jquery/jquery-3.6.0.js"></script>
 <script src="onlineschool/mainsrc/Documents/MVC/AjaxDocument/AjaxNewDocument.js"></script>
-<!-- <script src="onlineschool/mainsrc/Documents/MVC/AjaxDocument/AjaxDeleteBUTTON.js"></script> -->
-<!-- <script src="onlineschool/mainsrc/Documents/MVC/AjaxDocument/AjaxNewDocumentBUTTON.js"></script> -->
 
-<?php // require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
+
+<div class="b-example-divider"></div>
+<?php  require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>
 
 
