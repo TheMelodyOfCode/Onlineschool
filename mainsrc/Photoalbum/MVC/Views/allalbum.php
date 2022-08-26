@@ -31,7 +31,7 @@
             damit diese immer mit läd wenn NUR der Bereich neu läd !!!  -->
             <!-- Zusätzlich - da nur der bereich geladen wird -- wird man auch nicht an den Anfang (oben) 
             der seite zurück geführt nach erstellung eines neuen Albums, was nervig wäre wenn man viele Alben hätte -->
-        <div id="reloadPhotoAlbum" class=" container row">
+        <div id="reloadPhotoAlbum" class=" container row my-4">
         <?php require_once __DIR__ . "../../../../../mainsrc/Photoalbum/MVC/Views/ajaxPagePhotoAlbum.php" ?>
 
         </div>

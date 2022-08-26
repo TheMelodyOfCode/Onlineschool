@@ -51,15 +51,6 @@
         }
     }
 
-    /* .carousel-item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  object-fit: containt !important;
-  display: block;
-} */
-
     </style>
 
 

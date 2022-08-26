@@ -15,7 +15,7 @@
 
   <div class="b-example-divider"></div>
 
-<div class="album  bg-light">
+<div class="album  bg-light my-4">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
