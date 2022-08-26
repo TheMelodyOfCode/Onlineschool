@@ -53,6 +53,9 @@ require_once "init.php";
     elseif ($request == "/Users/userlink") {
         $router->add("userController", "userprofile");
     } 
+    elseif ($request == "/Profile") {
+        $router->add("userController", "singleProfileView");
+    } 
     elseif ($request == "/Users/userprofile") {
         $router->add("userController", "updateUserProfile");
     } 

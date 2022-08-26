@@ -58,6 +58,22 @@ class UserController extends AbstractController {
             }
     }
 
+    public function singleProfileView() {
+            $userid = $_GET["userid"];
+            $singleUser = $this->userDatabase->getSingleUser($userid);
+
+            if ($_SESSION["login"]) {
+                /** Hier werden die 3 Parameter übergeben für die Funktion Pageload aus dem AbstractControler
+                 *  directory, page und das Array mit den variablen */
+                $this->pageload("Users", "userprofileview", [ 
+                    # AUF DIE GENAUE SCHREIBWEISE ACHTEN
+                    "singleUser" => $singleUser,
+                    ]);
+            }   else {
+                header("Location: /Login"); 
+            }
+    }
+
 
     public function updateUserProfile() {
         $pwdFail = null;
