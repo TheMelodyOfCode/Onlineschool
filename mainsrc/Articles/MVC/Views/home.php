@@ -2,6 +2,33 @@
 
 
 <main>
+<!------- COOKIE ---------------------------------->
+
+<div id="cookieBanner"  class="text-center mt-4 bg-primary">
+
+<div class="modal modal-alert position-static d-block  py-5" tabindex="-1" role="dialog" id="modalChoice">
+  <div class="modal-dialog" role="document">
+  <div class="b-example-divider"></div>
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-4 text-center bg-white text-primary ">
+        <h5 class="mb-0">You don't like Cookie Banners?</h5>
+        <p class="mb-0 ">Yes, we 2! - Sorry about that! <br>
+         We use Cookies only for functionallity reasons.</p>
+         <a href="/onlineschool/mainsrc/Design/impressum.php">Information</a>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+        <button type="button" id="cookie-yes-btn"  class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-right"><strong>Yes, enable</strong></button>
+        <button type="button" id="cookie-no-btn"  class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0" data-bs-dismiss="modal">No thanks </button>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+  </div>
+</div>
+
+</div>
+
+<!---------------------------------------------->
+
 
 <div style="margin: 0" id="myCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -14,7 +41,7 @@
       <img class="img-fluid" src="/onlineschool/mainsrc/src/img/education2.jpg" alt="education picture" />
       <div class="container">
         <div class="carousel-caption text-start">
-          <h1>Heather from Scotland</h1>
+          <h1>Heather is a native speaker</h1>
           <p><a class="btn btn-lg btn-dark btn-outline-warning my-4" href="/Register">Sign up today</a></p>
         </div>
       </div>
@@ -23,8 +50,7 @@
       <img class="img-fluid" src="/onlineschool/mainsrc/src/img/scotland2.jpg" alt="scotland picture" />
       <div class="container">
         <div class="carousel-caption text-end">
-          <!-- <h1>Another example headline.</h1>
-          <p>Some representative placeholder content for the second slide of the carousel.</p> -->
+          <h1>Heather is from Scotland</h1>
           <p><a class="btn btn-lg btn-dark btn-outline-warning" href="/onlineschool/#courses">Learn more</a></p>
         </div>
       </div>
@@ -351,7 +377,5 @@
 
 </div><!-- /.container -->
 <hr class="featurette-divider">
-
-
 
 <?php require_once __DIR__ . "../../../../../mainsrc/Design/footer.php" ?>

@@ -11,9 +11,9 @@
         <br>
         <p class="lead text-muted">Angaben gemäß § 5 TMG</p>
         <!-- Button trigger modal -->
-<div class="text-center mt-4"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Kontaktdaten
-</button></div>
+      <div class="text-center mt-4"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Kontaktdaten
+      </button></div>
       </div>
     </div>
   </section>

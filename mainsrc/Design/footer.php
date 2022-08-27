@@ -14,6 +14,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="/onlineschool/mainsrc/src/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="/onlineschool/mainsrc/src/js/main.js" defer></script>
 
   </body>
 </html>

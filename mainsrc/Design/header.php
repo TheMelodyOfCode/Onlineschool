@@ -18,13 +18,14 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/onlineschool/mainsrc/src/fonts/fontawesome/css/all.css">
         <!-- Custom styles for Carousel and features -->
-        <link href="/onlineschool/mainsrc/src/css/carousel.css" rel="stylesheet">
+        <!-- <link href="/onlineschool/mainsrc/src/css/carousel.css" rel="stylesheet"> -->
         <link href="/onlineschool/mainsrc/src/css/features.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="/onlineschool/mainsrc/src/css/style.css" rel="stylesheet">
     <link href="/onlineschool/mainsrc/src/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
 
   /** // TODO: get rid of media queries  */
   @media (max-width: 1200px) {
