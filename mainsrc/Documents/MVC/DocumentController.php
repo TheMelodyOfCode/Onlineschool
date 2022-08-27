@@ -63,6 +63,7 @@ class DocumentController extends AbstractController {
     public function documentsettings(){
 
         $username = $_SESSION["username"];
+        $userid = $_SESSION["userid"];
         $documentid = $_GET['documentid'];
         $singleDocument = $this->documentDatabase->getSingleDocument( $documentid);
         
@@ -80,7 +81,7 @@ class DocumentController extends AbstractController {
                  * einzigartig und kann nicht zufällig überschrieben werden bei gleichem namen beim Documentupload */
                 $date = date("d.m.Y");
                 // $newfilename = $userid . "_" . $uploadfilename ;
-                $newfilename = $username . "_" . $date . ".pdf";
+                $newfilename = $userid . "_" . $username . "_" . $date . ".pdf";
                 
                 if (move_uploaded_file($_FILES["document"]["tmp_name"], $upload_dir . $newfilename )) {
                     // $this->documentDatabase->updateDocument($newfilename, $documentid);
@@ -128,14 +129,21 @@ class DocumentController extends AbstractController {
 
     }
 
-    // TODO: delete document from folder as well
     public function ajaxDeleteDocumentFunction(){
 
         $documentid = $_GET["documentid"];
+        $deleteDocument = $this->documentDatabase->getSingleDocument( $documentid);
+        $fileLocation = __DIR__. "../../../../mainsrc/UploadDocs/$deleteDocument->document";
+        unlink($fileLocation);
+ 
         $this->documentDatabase->deleteDocument($documentid);
+
         // TODO: fix reload page instead of route to dashboard
         header("Location: /Dashboard"); 
     }
+
+
+
 
     
     public function ajaxPageDocument(){
@@ -146,6 +154,7 @@ class DocumentController extends AbstractController {
         $this->pageload("Documents", "ajaxPageDocument", [
             "allDocuments" => $allDocuments,
         ]);
+
     }
 
     public function ajaxDisplaySingleDocumentSettingsPage(){

@@ -8,9 +8,7 @@
     <p ><h3 style="color: RED"><?php // echo $fail ?></h3></p>
     <br>
     <?php  // var_dump($_POST) ?>
-    <!-- Get ist standard und wird ausgeführt wenn man nichts angibt 
-    Wichtig ist das POST verwendet wird-->
-    <!-- TODO:add pricing option free ,basic , enterprise -->
+
     <form id="ajaxUpdateProfile" method="POST" >
         <div class="row">
 
