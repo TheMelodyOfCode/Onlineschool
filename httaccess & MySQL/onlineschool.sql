@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 25. Aug 2022 um 16:34
+-- Erstellungszeit: 27. Aug 2022 um 13:31
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.4
 
@@ -39,18 +39,18 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`textid`, `textname`, `textcontent`, `page`) VALUES
-(1, 'heather', ' <h1  class=\"display-5 fw-bold lh-1 mb-3\"> Hello and Welcome! </h1>\n      <h1  class=\"display-6 fw-bold lh-1 mb-3\"> I\'m Heather </h1>\n      <img src=\"/onlineschool/mainsrc/src/img/woman.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n    <div class=\"col-lg-6\">\n      <h3  class=\"display-5 fw-bold lh-1 mb-3\"> “Tell me and I forget, teach me and I may remember, involve me and I learn.” — <small>Benjamin Franklin</small></h3>\n      <p class=\"lead\">Here I\'m teling you all about me and my passion to teach . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n    \n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you even more about the online school how it works and bla bla bla.   </p>', 'home'),
+(1, 'heather', ' <h1  class=\"display-5 fw-bold lh-1 mb-3\"> Hello and Welcome! </h1>\n      <h1  class=\"display-6 fw-bold lh-1 mb-3\"> I\'m Heather, from Scotland. </h1>\n      <img src=\"/onlineschool/mainsrc/src/img/woman.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">\n    </div>\n    <div class=\"col-lg-6\">\n      <h3  class=\"display-5 fw-bold lh-1 mb-3\"> “Tell me and I forget, teach me and I may remember, involve me and I learn.” — <small>Benjamin Franklin</small></h3>\n      <p class=\"lead\">Here I\'m teling you all about me and my passion to teach . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n    \n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you even more about the online school how it works and bla bla bla.   </p>', 'home'),
 (2, 'onlineschool', '  <h1 class=\"display-5 fw-bold lh-1 mb-3\">Online School</h1>\n      <p class=\"lead\">Here I\'m teling you all about the online school how it works and bla bla bla.  Check out the examples below for how you can remix and restyle it to your liking. </p>\n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you all about the online school how it works and bla bla bla.   </p>\n    </div>\n    <div class=\"col-10 col-sm-8 col-lg-6\">\n      <img src=\"/onlineschool/mainsrc/src/img/onlineSchool.jpg\" class=\"d-block mx-lg-auto img-fluid\" alt=\"Bootstrap Themes\" width=\"700\" height=\"500\" loading=\"lazy\">', 'home'),
 (3, 'courses', '  <h1 class=\"display-5 fw-bold lh-1 mb-3\">Courses</h1>\n      <p class=\"lead\">Here I\'m teling you all about Courses . bla bla .Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>\n      <p class=\"col-md-8 fs-4\">Here yaddad yadda I\'m teling you all about the online school how it works and bla bla bla.   </p>', 'home'),
-(4, 'free greeting', '                                <h1 class=\"fw-light\">Free Learning Area </h1>\r\n        <p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p> \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                ', 'freelearning'),
-(5, 'pro greeting', '                                        <h1 class=\"fw-light\">Learning Area Pro</h1>\r\n        <p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p>\r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                                                ', 'prolearning'),
-(6, 'Pro Section title 1', '                                <h2>Pro Section title 1</h2>\r\n        <p>Mr. Poopybutthole (voiced by Justin Roiland) – A yellow humanoid creature and longtime family friend. He is a parody of wacky side characters on television shows. Although he shows up at the same time as a group of Alien Parasites who take the forms of similarly zany characters, Mr. Poopybutthole himself is real.</p>                                 ', 'prolearning'),
-(7, 'Pro Section title 2', '                        <h2>Pro Section title 2</h2>\r\n        <p>Arthricia (voiced by Chelsea Kane) – A young alien girl who resembles an anthropomorphic cat person. She resides on a planet with an Amish style culture whose residents engage in an annual \"purge\". She first injures Rick, mugs Morty, and steals their ship in order to use it to kill the rich people who dominate her planet and enforce the purge amongst the poor.</p>                ', 'prolearning'),
-(8, 'Pro Section title 3', '                <h2>Pro Section title 3</h2>\r\n        <p>Mr. Nimbus (voiced by Dan Harmon) – The King of the Ocean, ruler of Atlantis and Rick\'s arch-nemesis. Nimbus has a treaty with Rick for him to never touch the ocean, the breaking of which causes conflict between them. He also has hydrokinetic abilities and the power to control the police at a command.</p>                ', 'prolearning'),
-(9, 'enterprise greeting', '                                         <h1 class=\"fw-light\">Learning Area Enterprise</h1>\n        <p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p>\n                 \n                 \n                 \n                 \n                 \n                 \n                 \n                                                                                                ', 'enterprise'),
-(10, 'Enterprise Section title 1', '                <h2>Enterprise Section title 1</h2>\r\n        <p>Noob Noob (voiced by Justin Roiland) – The Vindicators\' intern and janitor, who appears to be of the same species as Mr. Poopybutthole except with asymmetrical eyes. He wishes to eventually become a full-fledged Vindicator, but is always made to stay behind and clean up their ship.</p>                                ', 'enterprise'),
-(11, 'Enterprise Section title 2', '        <h2>Enterprise Section title 2</h2>\r\n        <p>The Ferret Pilots – A group of teenagers animated in anime style who were the original pilots of the Gotron ferrets, large ferret-like vehicles. They kidnap Morty and initially try to bribe him with Boob World currency in exchange for insider information about Rick\'s operation, but when he resists, he is forced to fight off an assassination attempt.</p>', 'enterprise'),
-(12, 'Enterprise Section title 3', '        <h2>Enterprise Section title 3</h2>\r\n<p>Kendra (voiced by Lauren Tom) – A red-haired anime-like character who is the leader of the pilots from the five realities. She was hired by Rick, who did not know her real identity, to take control of the GoGotron. She later betrays and captures him in the GoGotron.</p>', 'enterprise');
+(4, 'free greeting', '<h1 class=\"fw-light\">Free Learning Area </h1>\r\n<p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p> \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                ', 'freelearning'),
+(5, 'pro greeting', '<h1 class=\"fw-light\">Learning Area Pro baby</h1><p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p>\r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                                                                ', 'prolearning'),
+(6, 'Pro Section title 1', '<h2>Pro Section title 1</h2>\r\n<p>Mr. Poopybutthole (voiced by Justin Roiland) – A yellow humanoid creature and longtime family friend. He is a parody of wacky side characters on television shows. Although he shows up at the same time as a group of Alien Parasites who take the forms of similarly zany characters, Mr. Poopybutthole himself is real.</p>                                                 ', 'prolearning'),
+(7, 'Pro Section title 2', '<h2>Pro Section title 2</h2>\r\n<p>Arthricia (voiced by Chelsea Kane) – A young alien girl who resembles an anthropomorphic cat person. She resides on a planet with an Amish style culture whose residents engage in an annual \"purge\". She first injures Rick, mugs Morty, and steals their ship in order to use it to kill the rich people who dominate her planet and enforce the purge amongst the poor.</p>                ', 'prolearning'),
+(8, 'Pro Section title 3', '<h2>Pro Section title 3</h2>\r\n<p>Mr. Nimbus (voiced by Dan Harmon) – The King of the Ocean, ruler of Atlantis and Rick\'s arch-nemesis. Nimbus has a treaty with Rick for him to never touch the ocean, the breaking of which causes conflict between them. He also has hydrokinetic abilities and the power to control the police at a command.</p>                ', 'prolearning'),
+(9, 'enterprise greeting', '<h1 class=\"fw-light\">Learning Area Enterprise</h1>\r\n<p class=\"lead text-muted\"> Welcome ! Let\'s get to it, shall we ?</p>\r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                 \r\n                                                                                                ', 'enterprise'),
+(10, 'Enterprise Section title 1', '<h2>Enterprise Section title 1</h2><p>Noob Noob (voiced by Justin Roiland) – The Vindicators\' intern and janitor, who appears to be of the same species as Mr. Poopybutthole except with asymmetrical eyes. He wishes to eventually become a full-fledged Vindicator, but is always made to stay behind and clean up their ship.</p>                                ', 'enterprise'),
+(11, 'Enterprise Section title 2', '<h2>Enterprise Section title 2</h2>\r\n<p>The Ferret Pilots – A group of teenagers animated in anime style who were the original pilots of the Gotron ferrets, large ferret-like vehicles. They kidnap Morty and initially try to bribe him with Boob World currency in exchange for insider information about Rick\'s operation, but when he resists, he is forced to fight off an assassination attempt.</p>', 'enterprise'),
+(12, 'Enterprise Section title 3', '<h2>Enterprise Section title 3</h2>\r\n<p>Kendra (voiced by Lauren Tom) – A red-haired anime-like character who is the leader of the pilots from the five realities. She was hired by Rick, who did not know her real identity, to take control of the GoGotron. She later betrays and captures him in the GoGotron.</p>', 'enterprise');
 
 -- --------------------------------------------------------
 
@@ -71,9 +71,7 @@ CREATE TABLE `documents` (
 --
 
 INSERT INTO `documents` (`documentid`, `userid`, `documentname`, `documentdescription`, `document`) VALUES
-(118, 57, 'Hausaufagbe 18', 'homework                                     ', 'Scary T._23.08.2022.pdf'),
-(125, 1, '333', 'XXX                                     ', ''),
-(126, 57, 'Homework 22', 'bloody difficult       ', 'Scary T._24.08.2022.pdf');
+(136, 57, 'XXX', 'YYY', '57_Scary T._27.08.2022.pdf');
 
 -- --------------------------------------------------------
 
@@ -206,13 +204,13 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT für Tabelle `documents`
 --
 ALTER TABLE `documents`
-  MODIFY `documentid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `documentid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT für Tabelle `photoalbum`
 --
 ALTER TABLE `photoalbum`
-  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `albumid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT für Tabelle `securitytokens`
