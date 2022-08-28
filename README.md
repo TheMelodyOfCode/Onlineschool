@@ -1,12 +1,23 @@
 # onlineschool.
-PHP &amp; MySQL project to learn and build a fully functional frontend - backend website,
+PHP & MySQL project to learn and build a fully functional frontend - backend website,
 
-This project is still in progress and not finished yet.
+This project has almost been completed. It's still missing a pay-sytem for pro and enterprise, 
+an email system for registration and password reset for the user.
+Apart from a few styling issues that still need to be done, the webite is fully functional.
+Since it's an onlineschool we have 2 sorts of users.
 
-The goal is to have a fully functional onlineschool website for teaching English.
-After Login there will be an area for the pupils where they have access to their materials and where they can upload their homework.
-There will also be  an admin area for the teachers to be able, to change certain content of the website, access the homework etc.
-I might add more stuff as I go along.
-On the end it should be possible to have a fully functional stack where the Design is separated from the Code.
+Students:
+After registration students get routed to their dashboard. here they can upload, edit and view their documents (homework).
+the uploaded documents are bound by the id of the student. they can only see their own documents.
+update their profile, view the Gallery or get in contact with other students and their teachers.
+More important the students can access their learning area they have signed up to.
+The routing system takes them (depending of their status) either to the free, pro or enterprise learning area.
 
-Since the project is still in progress there is still a lot to do.
+Teachers:
+Teacher have their own Dashboard which is also an admin Dashboard.
+The teacher dashboard gives them the option to check edit or delete the students documents (they are able to see all documents), 
+upload photos to the gallery, change the content of the free, pro or enterprise learning area 
+and update their own profile or upload their own documents.
+
+A documentation of the functinallity will follow.
+You will also find a mindmap in the src folder.
