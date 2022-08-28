@@ -17,11 +17,12 @@
   display:block;
   position: -webkit-sticky;
   position: sticky;
-  top: 10%;
-
+  top: 5%;
   padding: 50px;
   font-size: 20px;
 }
+
+
 
 
 /* ----------------------- */

@@ -4,7 +4,7 @@
 <main>
 <!------- COOKIE ---------------------------------->
 
-<div id="cookieBanner"  class="text-center mt-4 bg-primary">
+<div style="height: 35rem"  id="cookieBanner"  class="text-center mt-4 bg-transparent ">
 
 <div class="modal modal-alert position-static d-block  py-5" tabindex="-1" role="dialog" id="modalChoice">
   <div class="modal-dialog" role="document">
