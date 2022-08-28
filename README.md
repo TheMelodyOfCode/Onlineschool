@@ -22,4 +22,5 @@ upload photos to the gallery, change the content of the free, pro or enterprise 
 and update their own profile or upload their own documents.
 
 A documentation of the functinallity will follow.
+
 You will also find a mindmap in the src folder.
