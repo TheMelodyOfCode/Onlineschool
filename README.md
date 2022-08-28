@@ -21,6 +21,6 @@ The teacher dashboard gives them the option to check edit or delete the students
 upload photos to the gallery, change the content of the free, pro or enterprise learning area. (like a CMS system).
 and update their own profile or upload their own documents.
 
-A documentation of the functinallity will follow.
+A documentation of the functionallity will follow.
 
-You will also find a mindmap in the src folder.
+You can find a mindmap of the Data-flow in the src folder.
