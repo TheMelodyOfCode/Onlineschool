@@ -59,8 +59,7 @@
       <img class="img-fluid" src="/onlineschool/mainsrc/src/img/scotland3.jpg" alt="scotland3" />
       <div class="container">
         <div class="carousel-caption text-end">
-          <!-- <h1>One more for good measure.</h1>
-          <p>Some representative placeholder content for the third slide of this carousel.</p> -->
+           <h1>That's not Heather :-)</h1>
           <p><a  class="btn btn-lg btn-dark btn-outline-warning" href="/Gallery">Browse gallery</a></p>
         </div>
       </div>
