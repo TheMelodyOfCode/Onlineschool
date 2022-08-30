@@ -20,7 +20,7 @@ Put the httaccess file in the htdocs folder. (the httaccess file is necessary fo
 Now, Create a folder called onlineschool and put the project in that folder.
 
 After you've done that, go and find the folder connections and then the file ConToMySQL.php.
-Here you need to put your DB username and password into function conToMySQL1.
+Here you need to put the name of the DB onlineschool and your DB username and password into the function conToMySQL1.
 Normally the pw and username would NOT be in plain text but since it's a local installation for testing that's no problem.
 
 **That's it! You good to go.**
@@ -30,6 +30,7 @@ Like sql injection, accessing payed for pages by changing the URL , using code i
 In case I didn't PLEASE let me know if there are ANY security issues with this website. 
 
 
+**Userexperience:**
 Since it's an onlineschool we have 2 sorts of users.
 
 **Students:**
