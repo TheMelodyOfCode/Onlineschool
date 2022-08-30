@@ -12,7 +12,7 @@ In order to check this project out you need to do the following:
 I'm using  a MySQL DB with XAMPP.
 Just install XAMPP and create a db with the name onlineschool and import the onlineschool.sql file.
 This file contains all the necessary tables I created for this project.
-Don't forget to create a normal DB user, so you won't need root.
+Don't forget to create a normal DB user with limited access to the db, so you won't need to use root.
 
 After the download put the project in the htdocs Folder.
 Under Windows C:\xampp\htdocs\
