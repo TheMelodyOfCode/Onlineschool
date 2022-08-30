@@ -4,9 +4,8 @@ PHP & MySQL project to learn and build a fully functional frontend - backend web
 This project has almost been completed. It's still missing a pay-sytem for pro and enterprise, 
 an email system for registration and password reset for the user.
 Apart from a few styling issues that still need to be done, the webite is fully functional.
-Since it's an onlineschool we have 2 sorts of users.
 
-Getting started:
+**Getting started:**
 
 In order to check this project out you need to do the following:
 
@@ -25,6 +24,9 @@ That's it! You good to go.
 One of my targets , when I was creating this website, was to make sure that there are NO security issues with this website.
 Like sql injection, accessing payed for pages , using code in textareas etc.
 If you find ANY securty issues PLEASE let me know. 
+
+
+Since it's an onlineschool we have 2 sorts of users.
 
 Students:
 
