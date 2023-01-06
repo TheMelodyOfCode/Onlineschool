@@ -1,7 +1,7 @@
 <?php
 /** Die Index.php ist der Hauptausgangspunkt unserer Website.
- * Darum wird die Session mit der super globalen $_Session hier egstartet
- * So das wir von überall darauf zugriff haben. */
+ * Darum wird die Session mit der super globalen $_Session hier gestartet
+ * So das wir von überall darauf Zugriff haben. */
 session_start();
 require_once "init.php";
 // var_dump($_SESSION);
@@ -11,7 +11,7 @@ require_once "init.php";
 
 
     /** Hier instanziiert der Container uns den Router 
-     * so das wir zugriff auf dessen Funktionen haben */
+     * so das wir Zugriff auf dessen Funktionen haben */
     $router = $container->build("router");
 
     /** Path_info erhalten wir immer dann wenn wir keinen

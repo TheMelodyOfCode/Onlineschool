@@ -16,7 +16,7 @@ class ConToMySQL {
     }
     public function conToMySQL2(){
 
-        $pdo = new PDO('mysql:host=localhost; dbname=onlineschool; charset=utf8','testus','SchnickSchnack!');
+        $pdo = new PDO('mysql:host=localhost; dbname=onlineschool; charset=utf8','testus','12345');
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         return $pdo;
 

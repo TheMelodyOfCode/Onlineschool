@@ -10,7 +10,6 @@ class DashboardController extends AbstractController {
     public function __construct(UserDatabase $userDatabase)
     {
         $this->userDatabase = $userDatabase;
-
     }
 
     public function userDashboard(){
