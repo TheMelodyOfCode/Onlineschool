@@ -23,7 +23,7 @@ After you've done that, go and find the folder connections and then the file Con
 Here you need to put the name of the DB onlineschool and your DB username and password into the function conToMySQL1.
 Normally the pw and username would NOT be in plain text but since it's a local installation for testing that's no problem.
 
-**That's it! You good to go.**
+**That's it! You're good to go.**
 
 One of my targets , when I was creating this website, was to make sure that there are NO security issues with this website.
 Like sql injection, accessing payed for pages by changing the URL , using code in textareas etc. I hope I did a good job.
